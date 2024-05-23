@@ -5,7 +5,7 @@ author: "Andrei Guevorkian"
 illustrator: "Dengyijia Liu"
 ---
 
-Welcome to the world of Object-Oriented Programming (OOP)! This article introduces you to a way of programming that emphasizes structure and a solid foundation. Object-Oriented Programming is a relatively advanced topic in programming, and it's natural if some concepts don't make complete sense right away. As you read through the sections and learn the concepts, you’ll begin to see how OOP can help you write more organized, efficient, and scalable code. This guide will walk you through the fundamentals of OOP, giving you the tools to create robust and flexible programs.
+In this article, you'll be introduced to Object-Oriented Programming (OOP), a method of programming that focuses on building a solid and organized structure. OOP is a relatively advanced topic, and it's natural if its purpose and benefits aren't immediately clear. OOP is particularly useful in larger programs that need to scale easily, as it helps with the structure and organization of the code. This guide will cover the fundamentals of OOP, providing you with the knowledge and tools to understand and work with VEX V5 code.
 
 ## Table of Contents
 
