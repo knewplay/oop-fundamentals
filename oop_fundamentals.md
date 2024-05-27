@@ -9,4 +9,53 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 
 ## Table of Contents
 
+[Introduction to Object-Oriented Programming](#introduction-to-object-oriented-programming)
+
+- [What is OOP?]
+- [Brief History and Evolution of OOP]
+
+[Building Blocks of OOP](#building-blocks-of-oop)
+
+- [Classes and Objects](#classes-and-objects)
+- [Attributes and Methods](#attributes-and-methods)
+
+[The Four Pillars of OOP]
+
+- [Abstraction](#abstraction)
+- [Encapsulation](#encapsulation)
+- [Inheritance](#inheritance)
+- [Polymorphism](#polymorphism)
+
 ## Introduction to Object-Oriented Programming
+
+### What is OOP?
+
+### Brief History and Evolution of OOP
+
+## Building Blocks of OOP
+
+### Classes and Objects
+
+#### Example: Designing a Robot Class
+
+### Attributes and Methods
+
+#### Example: Robot Attributes and Behaviors
+
+## The Four Pillars of OOP
+
+### Abstraction
+
+#### Example: Simplifying Complex Robot Systems
+
+### Encapsulation
+
+#### Example: Protecting Robot Data
+
+### Inheritance
+
+#### Example: Specialized Robot Types
+
+### Polymorphism
+
+#### Example: Interchanging Robot Components
