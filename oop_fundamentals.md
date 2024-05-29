@@ -33,9 +33,9 @@ Object-Oriented Programming (OOP) represents a significant shift in how we think
 
 ### What is OOP?
 
-Object-Oriented Programming (OOP) is a way of organizing your code by modeling real-world things and their behaviors. Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's tasks, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
+Object-Oriented Programming (OOP) is a way of organizing your code by modeling real-world things and their behaviors. Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
 
-This is what OOP is at its core.
+This is what OOP is at its core: a method to create and manage complex programs by mimicking real-world systems and their interactions.
 
 ### Brief History and Evolution of OOP
 
@@ -66,20 +66,20 @@ Example:
 
 Use a robot example where a Robot object contains multiple Sensor objects and interacts with a Controller object. Explain how these relationships work in a real-world scenario, making the concepts clear and relatable.
 
-## The Four Pillars of OOP
+## The Four Pillars of OOP: A PIE
 
 ### Abstraction
 
 #### Example: Simplifying Complex Robot Systems
 
-### Encapsulation
+### Polymorphism
 
-#### Example: Protecting Robot Data
+#### Example: Interchanging Robot Components
 
 ### Inheritance
 
 #### Example: Specialized Robot Types
 
-### Polymorphism
+### Encapsulation
 
-#### Example: Interchanging Robot Components
+#### Example: Protecting Robot Data
