@@ -5,7 +5,7 @@ author: "Andrei Guevorkian"
 illustrator: "Dengyijia Liu"
 ---
 
-In this article, you'll be introduced to Object-Oriented Programming (OOP), a method of programming that focuses on building a solid and organized structure. OOP is a relatively advanced topic, and it's natural if its purpose and benefits aren't immediately clear. OOP is particularly useful in larger programs that need to scale easily, as it helps with the structure and organization of the code. This guide will cover the fundamentals of OOP, providing you with the knowledge and tools to understand and work with VEX V5 code.
+In this article, you'll be introduced to Object-Oriented Programming (OOP), a method of programming that focuses on building organized and easily scalable software. OOP is a relatively advanced topic, and it's natural if its purpose and benefits aren't immediately clear. OOP is particularly useful in larger programs that need to scale easily, as it helps with the structure and organization of the code. This guide will cover the fundamentals of OOP, providing you with the knowledge and tools to understand and work with VEX V5 code.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 - [Attributes and Methods](#attributes-and-methods)
 - [Objects and Their Relationships in Real-World Applications](#objects-and-their-relationships-in-real-world-applications)
 
-[The Four Pillars of OOP](#the-four-pillars-of-oop)
+[The Four Pillars of OOP: A PIE](#the-four-pillars-of-oop-a-pie)
 
 - [Abstraction](#abstraction)
 - [Encapsulation](#encapsulation)
@@ -29,13 +29,19 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 
 ## Introduction to Object-Oriented Programming
 
-Object-Oriented Programming (OOP) represents a significant shift in how we think about and write code. Instead of focusing solely on functions and logic, OOP emphasizes the importance of data structures that model real-world entities and their interactions. This approach can make your programs more intuitive, scalable, and easier to maintain.
-
 ### What is OOP?
 
-Object-Oriented Programming (OOP) is a way of organizing your code by modeling real-world things and their behaviors. Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
+Object-Oriented Programming (OOP) represents a significant shift in how we think about and write code. Instead of focusing solely on functions and logic, OOP emphasizes the importance of data structures that model real-world entities and their interactions. This approach can make your programs more intuitive, scalable, and easier to maintain.
 
-This is what OOP is at its core: a method to create and manage complex programs by mimicking real-world systems and their interactions.
+![Real-world modelling](./figures/)
+*OOP models real-world entities and interactions between them.*
+
+Object-Oriented Programming (OOP) is a way of organizing your code by modeling real-world entities and their behaviors. Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
+
+![Blueprint and designs](./figures/)
+*A blueprint on the left with three robots modeled from it on the right.*
+
+Having created different robots, we can now write code to specify their interactions with one another and other entities. This helps us manage complex systems in an organized fashion and represent them programmatically.
 
 ### Brief History and Evolution of OOP
 
