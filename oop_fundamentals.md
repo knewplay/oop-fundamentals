@@ -33,12 +33,12 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 
 Object-Oriented Programming (OOP) represents a significant shift in how we think about and write code. Instead of focusing solely on functions and logic, OOP emphasizes the importance of data structures that model real-world entities and their interactions. This approach can make your programs more intuitive, scalable, and easier to maintain.
 
-![Real-world modelling](./figures/)
+![Real-world modelling](./figures/world-modelling.jpg)
 *OOP models real-world entities and interactions between them.*
 
-Object-Oriented Programming (OOP) is a way of organizing your code by modeling real-world entities and their behaviors. Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
+Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
 
-![Blueprint and designs](./figures/)
+![Blueprint and designs](./figures/robot-blueprint.jpg)
 *A blueprint on the left with three robots modeled from it on the right.*
 
 Having created different robots, we can now write code to specify their interactions with one another and other entities. This helps us manage complex systems in an organized fashion and represent them programmatically.
