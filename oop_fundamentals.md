@@ -59,6 +59,9 @@ Today, OOP is a fundamental concept in computer science education and a standard
 
 ## Building Blocks of OOP
 
+![Class and objects](./figures/robot-class-objects.jpg)
+*A class called Robot, and two object instances of this class.*
+
 ### Classes and Objects
 
 #### Example: Designing a Robot Class
