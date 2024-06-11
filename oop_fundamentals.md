@@ -45,17 +45,15 @@ Having created different robots, we can now write code to specify their interact
 
 ### Brief History and Evolution of OOP
 
-Programming in general became necessary once computers were developed to perform calculations and automate tasks. In the early days of computing, programming was primarily procedural, meaning that programs were written as sequences of instructions that operated on data. Procedural programming is in fact all we did in the Programming Essentials book: writing commands that the computer processes in sequential order.
+Programming became essential as computers were developed to perform calculations and automate tasks. Initially, programming was procedural, involving writing commands that the computer processed in sequential order. Early languages like Fortran and COBOL (1950s-1960s) focused on solving mathematical problems and handling business-related tasks such as payroll processing and inventory management. The C language (1970s) advanced procedural programming for operating systems and complex applications.
 
-Early programming languages like Fortran and COBOL, developed in the 1950s and 1960s, focused on solving mathematical problems and handling business-related tasks such as payroll processing and inventory management by manipulating variables and executing commands step-by-step. The C programming language, developed in the early 1970s, further advanced procedural programming by providing powerful features for creating operating systems and complex software applications.
+The concept of Object-Oriented Programming (OOP) emerged in the 1960s with Simula, introducing the idea of simulating real-world entities and processes. This marked a shift from procedural programming by allowing more natural and flexible modeling of complex systems.
 
-The concept of Object-Oriented Programming (OOP) first emerged in the 1960s with the creation of Simula, a programming language developed in Norway. Simula introduced the idea of simulating real-world entities and processes, marking a significant departure from the purely procedural approach. This new method allowed programmers to model complex systems more naturally and intuitively, paving the way for more advanced and flexible software designs.
+In the 1980s, C++ built upon C by adding OOP features, addressing the need for better code management as software systems grew. OOP promotes code reusability, modularity, and easier maintenance through objects and classes (which we will cover in the next section).
 
-In the 1980s, OOP gained more traction with the development of C++, which built upon the C programming language by adding features that supported OOP. There was a necessity for this evolution because as software systems grew in size and complexity, the procedural approach became increasingly difficult to manage. OOP addressed these challenges by promoting code reusability, modularity, and easier maintenance through the use of objects and classes (which we will get to in the next section).
+The 1990s saw the rise of Java and Python. Java's ability to run on any computer system and Python's simplicity and readability brought OOP to a wider audience, making both languages popular for their versatility and built-in tools.
 
-The 1990s saw the rise of Java and Python. Java's ability to run on any computer system and Python's simplicity and readability brought OOP to a broader audience. Both languages became popular for their versatility and wide range of built-in tools, influencing software development practices across various domains.
-
-Today, OOP is a fundamental concept in computer science education and a standard practice in software development across various domains. Its principles help developers manage complexity, improve code reusability, and create scalable software solutions, making it an essential skill for modern programmers.
+Today, OOP is fundamental in computer science education and a standard practice in software development, helping developers manage complexity, improve code reusability, and create scalable solutions.
 
 ## Building Blocks of OOP
 
