@@ -57,16 +57,58 @@ Today, OOP is fundamental in computer science education and a standard practice 
 
 ## Building Blocks of OOP
 
-![Class and objects](./figures/robot-class-objects.jpg)
-*A class called Robot, and two object instances of this class.*
-
 ### Classes and Objects
 
-#### Example: Designing a Robot Class
+In Object-Oriented Programming (OOP), classes and objects are fundamental concepts. A class is a blueprint for creating objects, defining their structure and behavior. An object is an instance of a class, representing a concrete entity based on the class blueprint.
+
+#### Example: Designing a Robot class
+
+Imagine designing a class called Robot. This class serves as a template for creating various robots. Each robot created from this class would share the same foundational structure but can represent individual robots.
+
+#### Example: Designing a school management system
+
+Consider a school management system with separate classes for `Student` and `Teacher`.
+
+- `Student` class:
+
+  - Each student is created from the Student class.
+  - These students can then be part of the school system.
+
+- `Teacher` Class:
+
+  - Each teacher is created from the Teacher class.
+  - These teachers can then be part of the school system.
+
+By defining these classes, you can create student and teacher objects. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the entities within the system.
 
 ### Attributes and Methods
 
-#### Example: Robot Attributes and Behaviors
+In OOP, the key components of a class are its attributes and methods. Attributes describe the characteristics of an object (properties), while methods define what the object can do (actions). Explain what is an attribute, and what is a method. Readers already know what is a function, so use that to explain methods as well.
+
+#### Example: Robot attributes and behaviors
+
+Imagine designing a class called `Robot`. This class defines what a robot is like (its properties) and what it can do (its actions). For example, a robot might have a name, type, and color, and it can perform actions like moving, picking up objects, and turning.
+
+For the Robot class, properties might include the robot's name, type, and color. Actions could include moving, picking up objects, and turning.
+
+![Robot objects and their attributes](./figures/robot-class-objects.jpg)
+*A class called Robot, and two object instances of this class with their unique attributes.*
+
+#### Example: Person, Student, and Teacher attributes and behaviors
+
+Consider a school management system with separate classes for `Student` and `Teacher`.
+
+- `Student` class:
+
+  - Each student has a name, age, and school ID.
+  - Students can perform actions like enrolling in courses and taking exams.
+
+- `Teacher` Class:
+
+  - Each teacher has a name, subject, and employee ID.
+  - Teachers can perform actions like teaching classes and grading exams.
+
+By defining these classes, you can create student and teacher objects, each with its own properties and actions. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the data and actions associated with each entity.
 
 ### Objects and Their Relationships in Real-World Applications
 
@@ -83,7 +125,7 @@ Aggregation: Discuss how an object can be a collection of other objects, like a 
 Composition: Describe a stronger form of aggregation where the lifecycle of the contained objects depends on the lifecycle of the container object.
 Example:
 
-Use a robot example where a Robot object contains multiple Sensor objects and interacts with a Controller object. Explain how these relationships work in a real-world scenario, making the concepts clear and relatable.
+Use a robot example where a `Robot` object contains multiple `Sensor` objects and interacts with a `Controller` object. Explain how these relationships work in a real-world scenario, making the concepts clear and relatable.
 
 ## The Four Pillars of OOP: A PIE
 
