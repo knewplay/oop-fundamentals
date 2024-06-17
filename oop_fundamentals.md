@@ -135,6 +135,9 @@ Use a robot example where a `Robot` object contains multiple `Sensor` objects an
 
 ### Polymorphism
 
+![Animals speaking](./figures/polymorphism-speak.jpg)
+*Different animals (dog, cat, cow) inherit from `Animal` class and each implement their own `speak()` method.*
+
 #### Example: Interchanging Robot Components
 
 ### Inheritance
