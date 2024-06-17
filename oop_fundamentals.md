@@ -71,15 +71,17 @@ Consider a school management system with separate classes for `Student` and `Tea
 
 - `Student` class:
 
-  - Each student is created from the Student class.
-  - These students can then be part of the school system.
+  - The `Student` class serves as a blueprint for creating student objects.
+  - Each student object, also known as an instance of the `Student` class, represents an individual student.
+  - These student instances can then be part of the school system.
 
 - `Teacher` Class:
 
-  - Each teacher is created from the Teacher class.
-  - These teachers can then be part of the school system.
+  - The Teacher class serves as a blueprint for creating teacher objects.
+  - Each teacher object, also known as an instance of the Teacher class, represents an individual teacher.
+  - These teacher instances can then be part of the school system.
 
-By defining these classes, you can create student and teacher objects. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the entities within the system.
+By defining these classes, you can create student and teacher objects, each of which is an instance of their respective class. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the entities within the system.
 
 ### Attributes and Methods
 
