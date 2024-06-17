@@ -77,8 +77,8 @@ Consider a school management system with separate classes for `Student` and `Tea
 
 - `Teacher` Class:
 
-  - The Teacher class serves as a blueprint for creating teacher objects.
-  - Each teacher object, also known as an instance of the Teacher class, represents an individual teacher.
+  - The `Teacher` class serves as a blueprint for creating teacher objects.
+  - Each teacher object, also known as an instance of the `Teacher` class, represents an individual teacher.
   - These teacher instances can then be part of the school system.
 
 By defining these classes, you can create student and teacher objects, each of which is an instance of their respective class. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the entities within the system.
