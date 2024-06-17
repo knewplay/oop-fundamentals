@@ -85,20 +85,18 @@ By defining these classes, you can create student and teacher objects, each of w
 
 ### Attributes and Methods
 
-In OOP, the key components of a class are its attributes and methods. Attributes describe the characteristics of an object (properties), while methods define what the object can do (actions). Explain what is an attribute, and what is a method. Readers already know what is a function, so use that to explain methods as well.
+In OOP, the key components of a class are its attributes and methods. Attributes describe the characteristics of an object (properties), while methods define what the object can do (actions). Attributes are like variables that store data specific to an object. Methods, on the other hand, are functions that belong to a class and define the behaviors or actions that an object can perform.
 
 #### Example: Robot attributes and behaviors
 
-Imagine designing a class called `Robot`. This class defines what a robot is like (its properties) and what it can do (its actions). For example, a robot might have a name, type, and color, and it can perform actions like moving, picking up objects, and turning.
-
-For the Robot class, properties might include the robot's name, type, and color. Actions could include moving, picking up objects, and turning.
+Imagine designing a class called `Robot`. This class defines what a robot is like (its properties) and what it can do (its actions). For example, a robot might have a name, color, and weight, and it can perform actions like introducing itself.
 
 ![Robot objects and their attributes](./figures/robot-class-objects.jpg)
 *A class called Robot, and two object instances of this class with their unique attributes.*
 
-#### Example: Person, Student, and Teacher attributes and behaviors
+#### Example: Student and Teacher attributes and behaviors
 
-Consider a school management system with separate classes for `Student` and `Teacher`.
+Consider the school management system from before.
 
 - `Student` class:
 
