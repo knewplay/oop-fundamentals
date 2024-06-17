@@ -31,10 +31,20 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 
 ### What is OOP?
 
-Object-Oriented Programming (OOP) represents a significant shift in how we think about and write code. Instead of focusing solely on functions and logic, OOP emphasizes the importance of data structures that model real-world entities and their interactions. This approach can make your programs more intuitive, scalable, and easier to maintain.
+Object-Oriented Programming (OOP) represents a significant shift in how we think about and write code. Instead of focusing solely on functions and logic, OOP emphasizes the importance of data structures that model real-world entities and their interactions.
 
 ![Real-world modelling](./figures/world-modelling.jpg)
 *OOP models real-world entities and interactions between them.*
+
+Previously, we have learned about procedural programming. In procedural programming, the program is organized around functions that process data in a sequence. This means the whole program is focused on how data flows and what operations are performed on it step by step. It’s a function-focused approach.
+
+OOP, however, is a different paradigm. It focuses on structuring the information and modeling either the real world or a world we want to create through software, such as a game world. This shift in focus allows for a more organized and natural way of thinking about and interacting with data.
+
+For instance, let's say we want to write some code to extract and analyze data from a Stack Overflow survey. The survey data includes information on how many users use certain programming languages, how many years they've been programming, and their working preferences (remote, hybrid, or in-person). In a procedural approach, we would write a series of functions to handle each part of the process: one function to scrape the data from the website, another to store this data into a CSV file, and additional functions to analyze the data. We might count the number of times each programming language is mentioned, determine how many people work in different settings, and perform analysis to identify trends, such as which languages are most popular among remote workers. The program runs these functions in sequence: first loading data, then analyzing it, and then performing further analysis.
+
+Now, consider getting hired at a bank to work on their software backend. In this context, we have users who may or may not have bank accounts. Bank accounts have balances, can receive deposits, and have a deposit history. We can withdraw from an account, make deposits, or transfer money from one account to another through transactions. A transaction includes details such as the amount, the 'from' bank account, the 'to' bank account, and the date and time it was completed. This approach helps in modeling the banking system, capturing the relationships and interactions between users, accounts, and transactions in a structured and organized manner.
+
+By focusing on entities and their interactions, OOP allows us to create software that more closely mirrors real-world systems. This approach can make your programs more intuitive, scalable, and easier to maintain.
 
 ### Brief History and Evolution of OOP
 
@@ -143,6 +153,8 @@ Use a robot example where a `Robot` object contains multiple `Sensor` objects an
 #### Example: Interchanging Robot Components
 
 ### Inheritance
+
+Classes can inherent behaviors from eachother, forming hierarchies.
 
 #### Example: Specialized Robot Types
 
