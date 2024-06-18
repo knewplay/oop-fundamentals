@@ -121,7 +121,7 @@ Consider the school management system from before.
   - Each teacher has a name, subject, and employee ID.
   - Teachers can perform actions like teaching classes and grading exams.
 
-By defining these classes, you can create student and teacher objects, each with its own properties and actions. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the data and actions associated with each entity.
+By defining these classes, you can create student and teacher objects, each with its own properties and actions. This setup allows for efficient handling of all student and teacher-related operations.
 
 ### Objects and Their Relationships in Real-World Applications
 
