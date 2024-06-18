@@ -72,7 +72,7 @@ Imagine you're designing a fleet of robots for a competition. Instead of writing
 ![Blueprint and designs](./figures/robot-blueprint.jpg)
 *A blueprint on the left with three robots modeled from it on the right.*
 
-The blueprint you see on the left is the class, and the specific robots you see on the right, based on the blueprint, are known as objects. All classes have names; let's say the name of this class is `RoboticArm`. This class serves as a template for creating various robots. When you create a robot from this class, you are instantiating the class, and each instantiated robot is called an instance of the class. Each robot shares the same foundational structure but can have unique characteristics.
+The blueprint you see on the left is the class, and the specific robots you see on the right, based on the blueprint, are known as objects. All classes have names; let's say the name of this class is `RoboticArm`. This class serves as a template for creating various robotic arms. When you create a robot from this class, you are instantiating the class, and each instantiated robot is called an instance of the class. Each robot shares the same foundational structure but can have unique characteristics.
 
 By creating different robots from the `RoboticArm` class, you can manage their interactions and behaviors in an organized way. This approach allows you to efficiently handle complex systems and ensures that all robots adhere to a consistent design and functionality.
 
@@ -92,7 +92,7 @@ Consider a school management system with separate classes for `Student` and `Tea
   - Each teacher object, also known as an instance of the `Teacher` class, represents an individual teacher.
   - These teacher instances can then be part of the school system.
 
-By defining these classes, you can create student and teacher objects, each of which is an instance of their respective class. This allows the school management system to manage students and teachers efficiently, leveraging the power of OOP to organize and structure the entities within the system.
+By defining these classes, you can create student and teacher objects, each of which is an instance of their respective class. However, this is not the complete picture, as we also need to define attributes and methods to fully describe these entities and their behaviors.
 
 ### Attributes and Methods
 
