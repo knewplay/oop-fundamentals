@@ -125,20 +125,38 @@ By defining these classes, you can create student and teacher objects, each with
 
 ### Objects and Their Relationships in Real-World Applications
 
-Purpose of the section: Explain how OOP concepts are used in everyday applications, such as smartphone apps, video games, and web applications.
+One key idea in OOP is the concept of state. The state of an object refers to its data at a particular moment in time. You should use OOP when your system has entities with states that change and interact. For example, in a video game, characters and items have changing health points and positions; in a banking system, accounts have changing balances and transaction histories; and in a robotics system, sensors and motors have changing readings and positions. At any given moment, you can take a snapshot of the system, showing the current state of all its components. Let's now take a closer look at how OOP is used in these systems.
 
-- Illustrate how robotic systems use objects to manage different components, such as sensors, motors, and controllers.
-- Describe a simple example, like a banking system where customers and accounts are objects with attributes and methods.
-- Discuss how a game might use objects to represent players, enemies, and items, each with their own properties and behaviors.
+#### Video game
 
-Types of Object Relationships:
+In video games, objects are used to represent various entities, each with their own properties and behaviors. Making video games is a common use of OOP because it helps manage the complexity of game development. For instance:
 
-Association: Define and explain how one object can be associated with another, such as a robot and its controller.
-Aggregation: Discuss how an object can be a collection of other objects, like a robot composed of multiple sensors and motors.
-Composition: Describe a stronger form of aggregation where the lifecycle of the contained objects depends on the lifecycle of the container object.
-Example:
+- `Player` object: Might have attributes like health, score, and inventory, and methods for moving, attacking, and interacting with the game world.
+- `Enemy` objects: Have similar attributes and methods, tailored to their specific behaviors and interactions with the player.
+- `Item` objects: Include attributes for type and value, and methods for being picked up or used by the player.
 
-Use a robot example where a `Robot` object contains multiple `Sensor` objects and interacts with a `Controller` object. Explain how these relationships work in a real-world scenario, making the concepts clear and relatable.
+This object-oriented approach allows game developers to create complex, interactive environments where different entities interact in predictable and manageable ways.
+
+#### Banking system
+
+A banking system is another example where objects are used to represent various entities and their interactions. In this system, customers, accounts, and transactions are modeled as objects:
+
+- `Customer` objects: Have attributes such as name, address, and customer ID, and methods for opening accounts and making transactions.
+- `Account` objects: Have attributes like balance, account number, and transaction history, and methods for depositing and withdrawing money.
+- `Transaction` objects: Represent each transaction with attributes like transaction ID, amount, date, and type (deposit, withdrawal, transfer), and methods for processing the transaction.
+
+This approach allows the banking system to manage customer interactions, account operations, and transactions in an organized and efficient manner.
+
+#### Robotics system
+
+In a robotic system, objects can be used to manage different components, such as sensors, motors, and controllers. For example, consider a Robot object that interacts with various other objects:
+
+- `Robot` object: Represents the overall robot, containing attributes and methods that define its general properties and behaviors.
+- `Sensor` objects: Represent specific types of sensors, like temperature sensors or distance sensors, with attributes that describe their characteristics, such as current readings and status.
+- `Motor` objects: Represent the robot's actuators, which control movement and actions.
+- `Controller` object: Acts as the brain of the robot, processing input from sensors and sending commands to the motors to perform actions. It makes decisions based on sensor data.
+
+The `Controller` coordinates the interactions between sensors and motors to ensure the robot performs its tasks correctly. This structured relationship simplifies the management and coordination of the robot's various components.
 
 ## The Four Pillars of OOP: A PIE
 
