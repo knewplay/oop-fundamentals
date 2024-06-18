@@ -20,6 +20,8 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 - [Attributes and Methods](#attributes-and-methods)
 - [Objects and Their Relationships in Real-World Applications](#objects-and-their-relationships-in-real-world-applications)
 
+[A Glimpse into OOP Code](#a-glimpse-into-oop-code)
+
 [The Four Pillars of OOP: A PIE](#the-four-pillars-of-oop-a-pie)
 
 - [Abstraction](#abstraction)
@@ -157,6 +159,10 @@ In a robotic system, objects can be used to manage different components, such as
 - `Controller` object: Acts as the brain of the robot, processing input from sensors and sending commands to the motors to perform actions. It makes decisions based on sensor data.
 
 The `Controller` coordinates the interactions between sensors and motors to ensure the robot performs its tasks correctly. This structured relationship simplifies the management and coordination of the robot's various components.
+
+## A Glimpse into OOP Code
+
+We have the basic theory of classes, objects, attributes, and methods. Now it's time to look at some code. Let's look at a video game example. We'll start by creating a simple `Monster` class, which you could also call `Enemy`. This class will have attributes to store the monster's data and methods for the monster to perform actions like moving and attacking. We'll also introduce the concept of a constructor, which will allow us to initialize the monster's attributes.
 
 ## The Four Pillars of OOP: A PIE
 
