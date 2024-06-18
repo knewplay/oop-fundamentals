@@ -157,6 +157,9 @@ Use a robot example where a `Robot` object contains multiple `Sensor` objects an
 
 Classes can inherent behaviors from eachother, forming hierarchies.
 
+![Family inheritance](./figures/family-inheritance.jpg)
+*Family with children inheriting features from their parents: The son has his dad's curly hair and his mom's eye color and hair color, while the daughter has her dad's eye color and her mom's straight hair and hair color.*
+
 #### Example: Specialized Robot Types
 
 ### Encapsulation
