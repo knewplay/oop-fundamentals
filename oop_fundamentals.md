@@ -53,7 +53,7 @@ By focusing on entities and their interactions, OOP allows us to create software
 
 Programming became essential as computers were developed to perform calculations and automate tasks. Initially, programming was procedural, involving writing commands that the computer processed in sequential order. Early languages like Fortran and COBOL (1950s-1960s) focused on solving mathematical problems and handling business-related tasks such as payroll processing and inventory management. The C language (1970s) advanced procedural programming for operating systems and complex applications.
 
-The concept of Object-Oriented Programming (OOP) emerged in the 1960s with Simula, introducing the idea of simulating real-world entities and processes. This marked a shift from procedural programming by allowing more natural and flexible modeling of complex systems.
+The concept of Object-Oriented Programming emerged in the 1960s with Simula, introducing the idea of simulating real-world entities and processes. This marked a shift from procedural programming by allowing more natural and flexible modeling of complex systems.
 
 In the 1980s, C++ built upon C by adding OOP features, addressing the need for better code management as software systems grew. The 1990s saw the rise of Java and Python, both of which are OOP languages. Java's ability to run on any computer system and Python's simplicity and readability brought OOP to a wider audience, making both languages popular for their versatility and built-in tools.
 
@@ -63,7 +63,7 @@ Today, OOP is fundamental in computer science education and a standard practice 
 
 ### Classes and Objects
 
-In Object-Oriented Programming (OOP), classes and objects are fundamental concepts. A class is a blueprint for creating objects, defining their structure and behavior. An object is created from a class, representing a concrete entity based on the class blueprint.
+In Object-Oriented Programming, classes and objects are fundamental concepts. A class is a blueprint for creating objects, defining their structure and behavior. An object is created from a class, representing a concrete entity based on the class blueprint.
 
 #### Example: Designing a RoboticArm class
 
