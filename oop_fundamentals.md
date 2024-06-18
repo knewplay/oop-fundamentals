@@ -67,7 +67,7 @@ In Object-Oriented Programming, classes and objects are fundamental concepts. A 
 
 #### Example: Designing a RoboticArm class
 
-Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. This blueprint describes what a robot is like (its properties) and what it can do (its actions). You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
+Imagine you're designing a fleet of robots for a competition. Instead of writing separate pieces of code for each robot's functionality, OOP lets you create a blueprint for a robot. You can then create as many robots as you need from this blueprint, each with its own unique features but all sharing the same core design.
 
 ![Blueprint and designs](./figures/robot-blueprint.jpg)
 *A blueprint on the left with three robots modeled from it on the right.*
@@ -96,16 +96,16 @@ By defining these classes, you can create student and teacher objects, each of w
 
 ### Attributes and Methods
 
-In OOP, the key components of a class are its attributes and methods. Attributes describe the characteristics of an object (properties), while methods define what the object can do (actions). Attributes are like variables that store data specific to an object. Methods, on the other hand, are functions that belong to a class and define the actions that that object can perform.
+In OOP, the key components of a class are its attributes and methods. Attributes, which are the properties of an object, describe its characteristics. Methods define the actions an object can perform. Attributes are like variables that store data specific to an object. Methods, on the other hand, are functions that belong to a class and define the actions that the object can perform.
 
 #### Example: Robot attributes and behaviors
 
-Imagine designing a class called `Robot`. This class a placeholder for what a robot is like (its attributes) and what it can do (its methods). For example, a robot might have a name, color, and weight, and it can perform actions like introducing itself.
+Imagine designing a class called `Robot`. This class is a placeholder for what a robot is like (its attributes) and what it can do (its methods). For example, a robot might have a name, color, and weight, and it can perform actions like introducing itself.
 
 ![Robot objects and their attributes](./figures/robot-class-objects.jpg)
 *A class called Robot, and two object instances of this class with their unique attributes.*
 
-One robot can be called "Tom", be blue, and weigh 40 lbs, and another robot can be named "Jerry", be red, and weigh 10 lbs. When you create objects, you can give it custom attributes. However, when it comes to methods, these are less customizable, as we can see that both objects have the same method, that is "Introduce". Nonetheless, each attribute and method is linked to a given object. For example, the `Introduce` method done by the first object, and the `Introduce` method done by the second object, are not the same method. They always apply to their respective object.
+One robot can be called "Tom", be blue, and weigh 40 lbs, and another robot can be named "Jerry", be red, and weigh 10 lbs. When you create objects, you can give them custom attributes. However, when it comes to methods, these are less customizable, as we can see that both objects have the same method, which is "Introduce". Nonetheless, each attribute and method is linked to a given object. For example, the `Introduce` method done by the first object and the `Introduce` method done by the second object are not the same method. They always apply to their respective object.
 
 #### Example: Student and Teacher attributes and behaviors
 
