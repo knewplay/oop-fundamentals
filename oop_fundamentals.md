@@ -137,6 +137,9 @@ In video games, objects are used to represent various entities, each with their 
 - `Enemy` objects: Have similar attributes and methods, tailored to their specific behaviors and interactions with the player.
 - `Item` objects: Include attributes for type and value, and methods for being picked up or used by the player.
 
+![Game characters](./figures/game.jpg)
+*A player and goblins in a game, each with different health levels.*
+
 This object-oriented approach allows game developers to create complex, interactive environments where different entities interact in predictable and manageable ways.
 
 #### Banking system
