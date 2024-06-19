@@ -164,11 +164,51 @@ The `Controller` coordinates the interactions between sensors and motors to ensu
 
 We have the basic theory of classes, objects, attributes, and methods. Now it's time to look at some code. Let's look at a video game example. We'll start by creating a simple `Monster` class, which you could also call `Enemy`. This class will have attributes to store the monster's data and methods for the monster to perform actions like moving and attacking. We'll also introduce the concept of a constructor, which will allow us to initialize the monster's attributes.
 
+### Defining a Class
+
+In OOP, as we've seen multiple times, a class is a blueprint for creating objects. Let's start by defining the `Monster` class.
+
+```python
+class Monster:
+  // Add blueprint here
+```
+
+Use keyword `class` followed by the class name. Convention to capitalize class name or `CamelCase`. and use `snake_case` for variables.
+
+Now we can technically do something like this:
+
+```python
+class Monster:
+  health = 90
+  energy = 40
+```
+
+And I can create a Monster object by calling the Monster class as if it's a function, and then storing that object into a variable, for example `monster1`:
+
+```python
+class Monster:
+  health = 90
+  energy = 40
+
+monster1 = Monster()
+```
+
+
+#### Constructor
+
+
+As always, variables use `camel_case` notation.
+
+
+The constructor is a special function that is automatically called when a new object is created from the class. It is used to initialize the object's attributes with specific values. Here's how we define the constructor for the `Monster` class:
+
+
+
 ## The Four Pillars of OOP: A PIE
 
 ### Abstraction
 
-#### Example: Simplifying Complex Robot Systems
+#### Example: Simplifying complex robot systems
 
 ### Polymorphism
 
