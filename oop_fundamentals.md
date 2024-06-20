@@ -187,6 +187,7 @@ Now we can do something like this:
 ```python
 class Monster:
   // Attributes
+  name = "Goblin"
   health = 90
   energy = 40
 END class
@@ -197,6 +198,7 @@ We can create Monster objects by calling the `Monster` class like a function and
 ```python
 class Monster:
   // Attributes
+  name = "Goblin"
   health = 90
   energy = 40
 END class
@@ -207,7 +209,7 @@ monster2 = Monster()
 
 These `monster1` and `monster2` objects are different and stored in different memory locations on your computer.
 
-But right now, all calls to `Monster()` will create a monster with `health = 90` and `energy = 40`. The whole point of classes is for them to be a blueprint, not to specify the exact details themselves. What if we want a monster with `100` health and `10` energy? To achieve this flexibility, we need a way to initialize each monster with different values when we create them. This is where constructors come in.
+But right now, all calls to `Monster()` will create a monster with `name = "Goblin"`, `health = 90` and `energy = 40`. The whole point of classes is for them to be a blueprint, not to specify the exact details themselves. What if we want a monster with `100` health and `10` energy, by the name of "shark"? To achieve this flexibility, we need a way to initialize each monster with different values when we create them. This is where constructors come in.
 
 ### Constructor
 
