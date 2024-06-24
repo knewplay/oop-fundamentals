@@ -168,11 +168,11 @@ The `Controller` coordinates the interactions between sensors and motors to ensu
 
 ## A Glimpse into OOP Code
 
-We have the basic theory of classes, objects, attributes, and methods. Now it's time to look at some code. Let's look at a video game example. We'll start by creating a simple `Monster` class, which you could also call `Enemy`. This class will have attributes to store the monster's data and methods for the monster to perform actions like moving and attacking. We'll also introduce the concept of a constructor, which will allow us to initialize the monster's attributes.
+We have gone over the basic theory of classes, objects, attributes, and methods. Now it's time to look at some code. Let's look at a video game example. We'll start by creating a simple `Monster` class, which you could also call `Enemy`. This class will have attributes to store the monster's data and a constructor to initialize these attributes. Later, we will add methods for the monster to perform actions like moving and attacking.
 
 ### Defining a Class and Creating Objects
 
-In OOP, as we've seen multiple times, a class is a blueprint for creating objects. Let's start by defining the `Monster` class.
+In OOP, as we've seen multiple times, a class is a blueprint for creating objects. Let's start by defining the `Monster` class:
 
 ```python
 class Monster:
@@ -182,7 +182,7 @@ END class
 
 We use the keyword `class` followed by the class name. It's a convention to capitalize class names in `CamelCase` and use `snake_case` for variables.
 
-Now we can do something like this:
+Now we can add `name`, `health`, and `energy` as attributes of this class:
 
 ```python
 class Monster:
@@ -207,9 +207,9 @@ monster1 = Monster()
 monster2 = Monster()
 ```
 
-These `monster1` and `monster2` objects are different and stored in different memory locations on your computer.
+These `monster1` and `monster2` objects are different and stored in different memory locations on your computer. This means that each object has its own set of attributes and can be modified independently of the other. Even though they are both created from the same Monster class, they exist separately in memory.
 
-But right now, all calls to `Monster()` will create a monster with `name = "Goblin"`, `health = 90` and `energy = 40`. The whole point of classes is for them to be a blueprint, not to specify the exact details themselves. What if we want a monster with `100` health and `10` energy, by the name of "shark"? To achieve this flexibility, we need a way to initialize each monster with different values when we create them. This is where constructors come in.
+But right now, all calls to `Monster()` will create a monster with `name = "Goblin"`, `health = 90`, and `energy = 40`. The whole point of classes is for them to be a blueprint, not to specify the exact details themselves. What if we want a monster with `100` health and `10` energy, named "Shark"? To achieve this flexibility, we need a way to initialize each monster with different values when we create them. This is where constructors come in.
 
 ### Constructor
 
