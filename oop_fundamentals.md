@@ -213,6 +213,37 @@ But right now, all calls to `Monster()` will create a monster with `name = "Gobl
 
 ### Constructor
 
+Now, I will tell you, that there is a way to create custom objects on the fly, by doing something like this:
+
+```python
+monster1 = Monster("Goblin", 90, 40)
+monster2 = Monster("Shark", 100, 10)
+```
+
+However, in order to send such custom instructions when "calling" a class, we have to make some changes to the class so that it can take inputs. In order to do that, we have to add a constructor to the class.
+
+The constructor is a special function that is automatically called when a new object is created from the class. It initializes the object's attributes with specific values. Here's how we can define the constructor for the Monster class:
+
+```python
+class Monster:
+  // Constructor to initialize the monster's attributes
+  function Monster(name, health, energy):
+    this.name = name
+    this.health = health
+    this.energy = energy
+END class
+```
+
+I know this looks complicated, but bare with me.
+
+Remember how with functions, we could pass arguments,... explain, and remind what is parameter in a function definition. can use pseudocode to explain.
+
+Now that we remember how function calls work, we can recognize that this is not too different. We are creating an object based on a class by calling that class, and providing the necessary arguments for the constructor to do its thing.
+
+Now let's try to understand the `this` keyword. `this.name` refers to ... 
+
+Always remember that a variable we want to define is always on the left side of the equals sign, and we are equating it to whatever is on the right side.
+
 ## The Four Pillars of OOP: A PIE
 
 ### Abstraction
