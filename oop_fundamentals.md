@@ -176,7 +176,7 @@ In OOP, as we've seen multiple times, a class is a blueprint for creating object
 
 ```python
 class Monster:
-  # Add blueprint here
+    # Add blueprint here
 END class
 ```
 
@@ -188,10 +188,10 @@ Now we can add `name`, `health`, and `energy` as attributes of this class:
 
 ```python
 class Monster:
-  # Attributes
-  name = "Goblin"
-  health = 90
-  energy = 40
+    # Attributes
+    name = "Goblin"
+    health = 90
+    energy = 40
 END class
 ```
 
@@ -199,10 +199,10 @@ We can create Monster objects by calling the `Monster` class like a function and
 
 ```python
 class Monster:
-  # Attributes
-  name = "Goblin"
-  health = 90
-  energy = 40
+    # Attributes
+    name = "Goblin"
+    health = 90
+    energy = 40
 END class
 
 monster1 = Monster()
@@ -211,7 +211,7 @@ monster2 = Monster()
 
 These `monster1` and `monster2` objects are different and stored in different memory locations on your computer. This means that each object has its own set of attributes and can be modified independently of the other. Even though they are both created from the same Monster class, they exist separately in memory.
 
-But right now, all calls to `Monster()` will create a monster with `name = "Goblin"`, `health = 90`, and `energy = 40`. The whole point of classes is for them to be a blueprint, not to specify the exact details themselves. What if we want a monster with `100` health and `10` energy, named "Shark"? To achieve this flexibility, we need a way to initialize each monster with different values when we create them. This is where constructors come in.
+But right now, all calls to `Monster()` will create a monster with `name = "Goblin"`, `health = 90`, and `energy = 40`. The whole point of classes is for them to be a blueprint, not to specify the exact details themselves. What if we want a monster with 100 health and 10 energy, named "Shark"? To achieve this flexibility, we need a way to initialize each monster with different values when we create them. This is where constructors come in.
 
 ### Constructor
 
@@ -222,23 +222,7 @@ monster1 = Monster("Goblin", 90, 40)
 monster2 = Monster("Shark", 100, 10)
 ```
 
-However, to pass these custom values when creating an object (similar to passing arguments to a function), we need to modify the class to accept inputs. This is done by adding a constructor to the class.
-
-A constructor is a special function that is automatically called when a new object is created from the class. It initializes the object's attributes with specific values. Here's how we can define the constructor for the `Monster` class:
-
-```python
-class Monster:
-  # Constructor to initialize the monster's attributes
-  function Monster(name, health, energy):
-    this.name = name
-    this.health = health
-    this.energy = energy
-END class
-```
-
-I know this looks complicated, but bare with me.
-
-Remember how we could pass arguments to functions to perform specific tasks? Let's review what a parameter in a function definition is with a simple example:
+However, before we dive into how to make this work, let's remind ourselves about how functions work. Remember how we could pass arguments to functions to perform specific tasks? Let's review what a parameter in a function definition is with a simple example:
 
 ```python
 function greet(name):
@@ -246,38 +230,85 @@ function greet(name):
 END function
 
 greet("Alice")  # This will output: Hello, Alice
-
 ```
 
 In this example, `name` is a parameter of the `greet()` function, and `"Alice"` is the argument we pass when calling the function. The function then uses this argument to perform its task.
 
-> Make sure you understand what is a parameter and what is an argument.
+So now, going back to creating objects, observe that this:
 
-Now that we remember how function calls work, we can recognize that this is not too different. We are creating an object based on a class by calling that class and providing the necessary arguments for the constructor to do its thing.
+```python
+monster1 = Monster("Goblin", 90, 40)
+```
 
-Let's try to understand the this keyword. this.name refers to the name attribute of the current object instance. Here's a breakdown:
+Resembles a function call. To pass these custom values when creating an object, we need to modify the class to accept inputs. This is done by adding a constructor to the class.
+
+A constructor is a special function that is automatically called when a new object is created from the class. It initializes the object's attributes with specific values. Here's how we can define the constructor for the `Monster` class:
+
+```python
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(init_name, init_health, init_energy):
+        name = init_name
+        health = init_health
+        energy = init_energy
+    END function
+END class
+```
+
+In this version, `init_name`, `init_health`, and `init_energy` are parameters of the constructor, and `name`, `health`, and `energy` are the attributes of the class.
+
+However, to make it clearer that we are setting the attributes of the current object, we can use the `this` keyword. The `this` keyword refers to the current instance of the object, ensuring that the parameters are assigned to the correct attributes. Here's how we modify the constructor:
+
+```python
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(init_name, init_health, init_energy):
+        this.name = init_name
+        this.health = init_health
+        this.energy = init_energy
+    END function
+END class
+```
+
+Finally, since we can use the `this` keyword to refer to the attributes of the specific object, we can simplify our parameter names. Instead of using `init_name`, `init_health`, and `init_energy`, we can use `name`, `health`, and `energy` directly. This makes the code more readable and concise:
+
+```python
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(name, health, energy):
+        this.name = name
+        this.health = health
+        this.energy = energy
+    END function
+END class
+```
+
+Remember, in programming, the variable on the left of the equals sign (e.g., `this.name`) is the attribute of the object, and the value on the right (e.g., `name`) is the parameter passed to the constructor. This means that the attribute `this.name` is being assigned the value of the parameter `name`. In other words, the parameter value passed to the constructor is stored in the attribute of the specific object.
+
+If you're still confused, bare with me.
+
+Let's try to understand the `this` keyword. `this.name` refers to the `name` attribute of the current object instance. Here's a breakdown:
 
 - `this.name = name`: The attribute `name` of the current object (referred to by `this`) is assigned the value of the `name` parameter passed to the constructor.
 - Without the `this` keyword, the constructor would not know whether `name` refers to the object's attribute or the parameter. Using this makes it clear that we are setting the object's attribute.
 
-Always remember that a variable we want to define is always on the left side of the equals sign, and we are equating it to whatever is on the right side.
-
-Now, let's look at our earlier example again:
+All in all, here is what we have:
 
 ```python
 class Monster:
-  # Constructor to initialize the monster's attributes
-  function Monster(name, health, energy):
-    this.name = name
-    this.health = health
-    this.energy = energy
+    # Constructor to initialize the monster's attributes
+    function Monster(name, health, energy):
+        this.name = name
+        this.health = health
+        this.energy = energy
+    END function
 END class
 
 monster1 = Monster("Goblin", 90, 40)
 monster2 = Monster("Shark", 100, 10)
 ```
 
-By using the constructor, we can initialize each monster with different values for name, health, and energy, making our class flexible and reusable, just like an actual blueprint.
+By using the constructor, we can initialize each monster with different values for name, health, and energy, making our class flexible and reusable, just how it was meant to be.
 
 ## The Four Pillars of OOP: A PIE
 
