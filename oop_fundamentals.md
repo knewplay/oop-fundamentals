@@ -176,17 +176,19 @@ In OOP, as we've seen multiple times, a class is a blueprint for creating object
 
 ```python
 class Monster:
-  // Add blueprint here
+  # Add blueprint here
 END class
 ```
 
 We use the keyword `class` followed by the class name. It's a convention to capitalize class names in `CamelCase` and use `snake_case` for variables.
 
+> **Note:** We will use the `#` symbol for single-line comments in this document.
+
 Now we can add `name`, `health`, and `energy` as attributes of this class:
 
 ```python
 class Monster:
-  // Attributes
+  # Attributes
   name = "Goblin"
   health = 90
   energy = 40
@@ -197,7 +199,7 @@ We can create Monster objects by calling the `Monster` class like a function and
 
 ```python
 class Monster:
-  // Attributes
+  # Attributes
   name = "Goblin"
   health = 90
   energy = 40
@@ -213,20 +215,20 @@ But right now, all calls to `Monster()` will create a monster with `name = "Gobl
 
 ### Constructor
 
-Now, I will tell you, that there is a way to create custom objects on the fly, by doing something like this:
+Now, I will tell you, that there is a way to create custom objects on the fly, like so:
 
 ```python
 monster1 = Monster("Goblin", 90, 40)
 monster2 = Monster("Shark", 100, 10)
 ```
 
-However, in order to send such custom instructions when "calling" a class, we have to make some changes to the class so that it can take inputs. In order to do that, we have to add a constructor to the class.
+However, to pass these custom values when creating an object (similar to passing arguments to a function), we need to modify the class to accept inputs. This is done by adding a constructor to the class.
 
-The constructor is a special function that is automatically called when a new object is created from the class. It initializes the object's attributes with specific values. Here's how we can define the constructor for the Monster class:
+A constructor is a special function that is automatically called when a new object is created from the class. It initializes the object's attributes with specific values. Here's how we can define the constructor for the `Monster` class:
 
 ```python
 class Monster:
-  // Constructor to initialize the monster's attributes
+  # Constructor to initialize the monster's attributes
   function Monster(name, health, energy):
     this.name = name
     this.health = health
@@ -236,13 +238,46 @@ END class
 
 I know this looks complicated, but bare with me.
 
-Remember how with functions, we could pass arguments,... explain, and remind what is parameter in a function definition. can use pseudocode to explain.
+Remember how we could pass arguments to functions to perform specific tasks? Let's review what a parameter in a function definition is with a simple example:
 
-Now that we remember how function calls work, we can recognize that this is not too different. We are creating an object based on a class by calling that class, and providing the necessary arguments for the constructor to do its thing.
+```python
+function greet(name):
+    print("Hello, " + name)
+END function
 
-Now let's try to understand the `this` keyword. `this.name` refers to ... 
+greet("Alice")  # This will output: Hello, Alice
+
+```
+
+In this example, `name` is a parameter of the `greet()` function, and `"Alice"` is the argument we pass when calling the function. The function then uses this argument to perform its task.
+
+> Make sure you understand what is a parameter and what is an argument.
+
+Now that we remember how function calls work, we can recognize that this is not too different. We are creating an object based on a class by calling that class and providing the necessary arguments for the constructor to do its thing.
+
+Let's try to understand the this keyword. this.name refers to the name attribute of the current object instance. Here's a breakdown:
+
+- `this.name = name`: The attribute `name` of the current object (referred to by `this`) is assigned the value of the `name` parameter passed to the constructor.
+- Without the `this` keyword, the constructor would not know whether `name` refers to the object's attribute or the parameter. Using this makes it clear that we are setting the object's attribute.
 
 Always remember that a variable we want to define is always on the left side of the equals sign, and we are equating it to whatever is on the right side.
+
+Now, let's look at our earlier example again:
+
+```python
+class Monster:
+  # Constructor to initialize the monster's attributes
+  function Monster(name, health, energy):
+    this.name = name
+    this.health = health
+    this.energy = energy
+END class
+
+monster1 = Monster("Goblin", 90, 40)
+monster2 = Monster("Shark", 100, 10)
+```
+
+By using the constructor, we can initialize each monster with different values for name, health, and energy, making our class flexible and reusable, just like an actual blueprint.
 
 ## The Four Pillars of OOP: A PIE
 
