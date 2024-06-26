@@ -314,6 +314,11 @@ By using the constructor, we can initialize each monster with different values f
 
 ### Abstraction
 
+![Phone app abstraction of code](./figures/abstraction-apps.jpg)
+*Smartphones abstracts out the complicated processes actually required to open an app.*
+
+In programming, abstraction is about being able to call or use functions of parts of code without knowing its implementation details, because you don't have to know them. This allows for things to be worked on separately as long as the inputs and outputs don't change.
+
 #### Example: Simplifying complex robot systems
 
 ### Polymorphism
@@ -327,7 +332,7 @@ By using the constructor, we can initialize each monster with different values f
 
 Classes can inherent behaviors from eachother, forming hierarchies.
 
-![Family inheritance](./figures/family-inheritance.jpg)
+![Family inheritance](./figures/inheritance-family.jpg)
 *Family with children inheriting features from their parents: The son has his dad's curly hair and his mom's eye color and hair color, while the daughter has her dad's eye color and her mom's straight hair and hair color.*
 
 #### Example: Specialized Robot Types
