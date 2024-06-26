@@ -28,9 +28,9 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 [The Four Pillars of OOP: A PIE](#the-four-pillars-of-oop-a-pie)
 
 - [Abstraction](#abstraction)
-- [Encapsulation](#encapsulation)
-- [Inheritance](#inheritance)
 - [Polymorphism](#polymorphism)
+- [Inheritance](#inheritance)
+- [Encapsulation](#encapsulation)
 
 ## Introduction to Object-Oriented Programming
 
