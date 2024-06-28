@@ -314,12 +314,75 @@ By using the constructor, we can initialize each monster with different values f
 
 ### Abstraction
 
+The concept of abstraction exists in programming even outside of the realm of OOP. Abstraction allows you to use functions without needing to understand their internal implementation details. This ensures that only the necessary information is exposed to the user, making the system easier to work with and maintain.
+
+Specifically to OOP, abstraction involves hiding the complex implementation details and showing only the necessary features of an object. This makes the code easier to work with and understand by focusing on what an object does rather than how it does it.
+
+One example of abstraction is smartphone apps. When you use an app on your phone, you interact with a simple interface. You don’t need to know the complex processes happening in the background to open the app and use its features.
+
 ![Phone app abstraction of code](./figures/abstraction-apps.jpg)
-*Smartphones abstracts out the complicated processes actually required to open an app.*
+*A smartphone abstracts out the complicated processes required to open an app.*
 
-In programming, abstraction is about being able to call or use functions of parts of code without knowing its implementation details, because you don't have to know them. This allows for things to be worked on separately as long as the inputs and outputs don't change.
+Abstraction simplifies code maintenance and enhances readability. It allows different parts of a program to be developed and worked on independently as long as the inputs and outputs remain consistent.
 
-#### Example: Simplifying complex robot systems
+For example, when you start a car, you don't need to know how the engine, spark plugs, or battery work. You only need to know how to start the car, turn the steering wheel, accelerate, and brake. The processes that make these actions possible happen in the background and are considered "private" information.
+
+![Car abstracted](./figures/)
+*A Car object can have private methods, only accessible to the car object itself, and public methods, accessible to any other object interacting with the Car object.*
+
+In the illustration above, we have a method like `create_spark()`, which only needs to be called within the `turn_on()` method, which in turn is accessible by other objects, such as `Driver`. So when `turn_on()` gets called by `Driver`, certain private methods will in turn get called by `turn_on()` in order to turn on the car. Here is what the `turn_on()` method might look like:
+
+```python
+class Car:
+    function turn_on():
+        engage_ignition_switch()
+        send_power_from_battery()
+        engage_starter_motor()
+        turn_crankshaft()
+        mix_fuel_and_air()
+        ignite_spark_plugs()
+        start_combustion()
+    END function
+END class
+
+```
+
+Similarly, in a video game, you might have a `Monster` class where only certain methods and attributes are exposed to other parts of the program. Here’s an example:
+
+```python
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(name, health, energy):
+        this.name = name
+        this.health = health
+        this.energy = energy
+    END function
+
+    # Public method to make the monster talk
+    public function talk():
+        print("I am an enemy. Run!")
+    END function
+
+    # Public method to make the monster attack
+    public function attack():
+        print("The monster attacks!")
+    END function
+
+    # Private method to calculate damage
+    private function calculate_damage():
+        return this.health * 0.1
+    END function
+
+    # Private method to regenerate energy
+    private function regenerate_energy():
+        this.energy = this.energy + 10
+    END function
+END class
+```
+
+> Note: This is pseudocode. Different programming languages have different ways to specify whether a function is public or private. In this example, we indicate whether a function is public or private directly in front of the function definition.
+
+In this example, the Monster class has a constructor to initialize its attributes (`name`, `health`, and `energy`). It also has public methods `talk()` and `attack()` that allow the monster to speak and attack. The private methods `calculate_damage()` and `regenerate_energy()` manage internal calculations and energy regeneration, and are not accessible from outside the class. This demonstrates the concept of abstraction by exposing only the necessary details to other parts of the program while keeping the internal workings hidden.
 
 ### Polymorphism
 
