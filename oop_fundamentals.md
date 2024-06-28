@@ -344,8 +344,9 @@ class Car:
         start_combustion()
     END function
 END class
-
 ```
+
+#### Example: Abstracting Monster Class Details
 
 Similarly, in a video game, you might have a `Monster` class where only certain methods and attributes are exposed to other parts of the program. Here’s an example:
 
