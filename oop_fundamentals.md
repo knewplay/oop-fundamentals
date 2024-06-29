@@ -396,9 +396,27 @@ Classes can inherent behaviors from eachother, forming hierarchies.
 
 ### Polymorphism
 
-process of having multiple classes that can be treated the same way. Polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes.
+The word polymorphism comes from the Greek words "poly" (meaning many) and "morph" (meaning forms). In programming, it refers to the ability of a single function or method to work in different ways depending on the object it is acting upon. Polymorphism promotes flexibility and integration in your code, making it easier to manage and extend.
+
+An example of polymorphism is a group of animals where each animal can make a sound, but the sound differs depending on the type of animal. For instance, dogs bark, cats meow, and cows moo. Despite these differences, we can treat them all as animals and call the same speak() method on each, with the actual output varying based on the specific animal.
 
 ![Animals speaking](./figures/polymorphism-speak.jpg)
 *Different animals (dog, cat, cow) inherit from `Animal` class and each implement their own `speak()` method.*
+
+Another example of polymorphism is the President of the United States and his advisors. The President has many advisors, each specializing in different fields:
+
+- Military Advisors
+- Legal Advisors
+- Healthcare Advisors
+- Economic Advisors
+
+The President is not an expert in military strategy, legal affairs, healthcare, or economics. And he doesn't need to be. He employs a polymorphic approach to governance by asking his advisors for their expert advice. When the President asks for advice, each advisor responds according to their expertise, but they all understand the common request to "advise". The President should be able to simply say "advise" and each advisor will know what to do in their respective field. For example, the President doesn't need to tell the military general any details of how to run military operations; the general knows what to do.
+
+This approach allows the President to govern effectively without getting bogged down in the specifics of each area. Each advisor provides their expert input, allowing the President to make informed decisions based on their recommendations. This illustrates how polymorphism allows a single interface (the "advise" method) to be used for different types of advice, simplifying the President's role and leveraging the expertise of his advisors.
+
+![President advisors](./figures/)
+*The President saying "advise" to a group of advisors, each providing expert advice based on their field.*
+
+process of having multiple classes that can be treated the same way. Polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes.
 
 ### Encapsulation
