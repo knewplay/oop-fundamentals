@@ -312,7 +312,7 @@ By using the constructor, we can initialize each monster with different values f
 
 ## The Four Pillars of OOP: A PIE
 
-A PIE is an acronym to help you remember the main principles of OOP: Abstraction, Polymorphism, Inheritance, and Encapsulation. These principles are essential for creating well-structured and efficient programs. To ensure a smooth progression and better understanding, I will invert the P and the I and explain Inheritance before Polymorphism.
+"A PIE" is an acronym to help you remember the main principles of OOP: Abstraction, Polymorphism, Inheritance, and Encapsulation. These principles are essential for creating well-structured and efficient programs. To ensure a smooth progression and better understanding, I will invert the order of "P" and "I" and explain Inheritance before Polymorphism.
 
 ### Abstraction
 
