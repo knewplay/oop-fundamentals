@@ -398,7 +398,7 @@ Classes can inherent behaviors from eachother, forming hierarchies.
 
 The word polymorphism comes from the Greek words "poly" (meaning many) and "morph" (meaning forms). In programming, it refers to the ability of a single function or method to work in different ways depending on the object it is acting upon. Polymorphism promotes flexibility and integration in your code, making it easier to manage and extend.
 
-An example of polymorphism is a group of animals where each animal can make a sound, but the sound differs depending on the type of animal. For instance, dogs bark, cats meow, and cows moo. Despite these differences, we can treat them all as animals and call the same speak() method on each, with the actual output varying based on the specific animal.
+An example of polymorphism is a group of animals where each animal can make a sound, but the sound differs depending on the type of animal. For instance, dogs bark, cats meow, and cows moo. Despite these differences, we can treat them all as animals and call the same `speak()` method on each, with the actual output varying based on the specific animal.
 
 ![Animals speaking](./figures/polymorphism-speak.jpg)
 *Different animals (dog, cat, cow) inherit from `Animal` class and each implement their own `speak()` method.*
@@ -417,6 +417,6 @@ This approach allows the President to govern effectively without getting bogged 
 ![President advisors](./figures/)
 *The President saying "advise" to a group of advisors, each providing expert advice based on their field.*
 
-process of having multiple classes that can be treated the same way. Polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes.
+In OOP, polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes, facilitating the process of having multiple classes that can be treated the same way.
 
 ### Encapsulation
