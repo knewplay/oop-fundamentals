@@ -28,8 +28,8 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 [The Four Pillars of OOP: A PIE](#the-four-pillars-of-oop-a-pie)
 
 - [Abstraction](#abstraction)
-- [Polymorphism](#polymorphism)
 - [Inheritance](#inheritance)
+- [Polymorphism](#polymorphism)
 - [Encapsulation](#encapsulation)
 
 ## Introduction to Object-Oriented Programming
@@ -312,6 +312,8 @@ By using the constructor, we can initialize each monster with different values f
 
 ## The Four Pillars of OOP: A PIE
 
+A PIE is an acronym to help you remember the main principles of OOP: Abstraction, Polymorphism, Inheritance, and Encapsulation. These principles are essential for creating well-structured and efficient programs. To ensure a smooth progression and better understanding, I will invert the P and the I and explain Inheritance before Polymorphism.
+
 ### Abstraction
 
 The concept of abstraction exists in programming even outside of the realm of OOP. Abstraction allows you to use functions without needing to understand their internal implementation details. This ensures that only the necessary information is exposed to the user, making the system easier to work with and maintain.
@@ -385,13 +387,6 @@ END class
 
 In this example, the Monster class has a constructor to initialize its attributes (`name`, `health`, and `energy`). It also has public methods `talk()` and `attack()` that allow the monster to speak and attack. The private methods `calculate_damage()` and `regenerate_energy()` manage internal calculations and energy regeneration, and are not accessible from outside the class. This demonstrates the concept of abstraction by exposing only the necessary details to other parts of the program while keeping the internal workings hidden.
 
-### Polymorphism
-
-![Animals speaking](./figures/polymorphism-speak.jpg)
-*Different animals (dog, cat, cow) inherit from `Animal` class and each implement their own `speak()` method.*
-
-#### Example: Interchanging Robot Components
-
 ### Inheritance
 
 Classes can inherent behaviors from eachother, forming hierarchies.
@@ -399,8 +394,11 @@ Classes can inherent behaviors from eachother, forming hierarchies.
 ![Family inheritance](./figures/inheritance-family.jpg)
 *Family with children inheriting features from their parents: The son has his dad's curly hair and his mom's eye color and hair color, while the daughter has her dad's eye color and her mom's straight hair and hair color.*
 
-#### Example: Specialized Robot Types
+### Polymorphism
+
+process of having multiple classes that can be treated the same way. Polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes.
+
+![Animals speaking](./figures/polymorphism-speak.jpg)
+*Different animals (dog, cat, cow) inherit from `Animal` class and each implement their own `speak()` method.*
 
 ### Encapsulation
-
-#### Example: Protecting Robot Data
