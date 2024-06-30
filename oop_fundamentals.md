@@ -215,7 +215,7 @@ But right now, all calls to `Monster()` will create a monster with `name = "Gobl
 
 ### Constructor
 
-Now, I will tell you, that there is a way to create custom objects on the fly, like so:
+Spoiler alert: there is a way to create custom objects on the fly, like so:
 
 ```python
 monster1 = Monster("Goblin", 90, 40)
