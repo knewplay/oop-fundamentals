@@ -403,7 +403,9 @@ Inheritance is useful when you have an existing class, and you want to build a n
 
 #### Example: Inheriting from the Monster Class
 
-In our videogame example, where we already have `Monster` class, let's say we want to 
+Let's use our `Monster` class to illustrate inheritance. We will create a base class `Monster` and then create different types of monsters that inherit from this base class. Each monster type will have its own unique features and behaviors.
+
+
 
 ### Polymorphism
 
