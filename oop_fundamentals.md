@@ -332,11 +332,11 @@ For example, when you start a car, you don't need to know how the engine, spark 
 ![Car abstracted](./figures/)
 *A Car object can have private methods, only accessible to the car object itself, and public methods, accessible to any other object interacting with the Car object.*
 
-In the illustration above, we have a method like `create_spark()`, which only needs to be called within the `turn_on()` method, which in turn is accessible by other objects, such as `Driver`. So when `turn_on()` gets called by `Driver`, certain private methods will in turn get called by `turn_on()` in order to turn on the car. Here is what the `turn_on()` method might look like:
+In the illustration above, we have a method like `create_spark()`, which only needs to be called within the `turn_on()` method, which in turn is accessible by other objects, such as `Driver`. So when `turn_on()` gets called by `Driver`, certain private methods will in turn get called by `turn_on()` in order to turn on the car. Here is what the `turn_on()` method might look like, along with the private methods which it calls:
 
 ```python
 class Car:
-    function turn_on():
+    public function turn_on():
         engage_ignition_switch()
         send_power_from_battery()
         engage_starter_motor()
@@ -345,8 +345,26 @@ class Car:
         ignite_spark_plugs()
         start_combustion()
     END function
+
+    private function _engage_ignition_switch():
+        # code to engage ignition switch
+    END function
+
+    private function _send_power_from_battery():
+        # code to send power from battery
+    END function
+
+    ...
+
+    private function _start_combustion():
+        // code to start combustion
+    END function
+
 END class
 ```
+
+> Note: This is pseudocode. Different programming languages have different ways to specify whether a function is public or private. In this example, we indicate whether a function is public or private directly in front of the function definition.
+
 
 #### Example: Abstracting Monster Class Details
 
@@ -382,8 +400,6 @@ class Monster:
     END function
 END class
 ```
-
-> Note: This is pseudocode. Different programming languages have different ways to specify whether a function is public or private. In this example, we indicate whether a function is public or private directly in front of the function definition.
 
 In this example, the Monster class has a constructor to initialize its attributes (`name`, `health`, and `energy`). It also has public methods `talk()` and `attack()` that allow the monster to speak and attack. The private methods `calculate_damage()` and `regenerate_energy()` manage internal calculations and energy regeneration, and are not accessible from outside the class. This demonstrates the concept of abstraction by exposing only the necessary details to other parts of the program while keeping the internal workings hidden.
 
