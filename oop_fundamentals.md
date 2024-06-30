@@ -365,7 +365,6 @@ END class
 
 > Note: This is pseudocode. Different programming languages have different ways to specify whether a function is public or private. In this example, we indicate whether a function is public or private directly in front of the function definition.
 
-
 #### Example: Abstracting Monster Class Details
 
 Similarly, in a video game, you might have a `Monster` class where only certain methods and attributes are exposed to other parts of the program. Here’s an example:
@@ -420,8 +419,6 @@ Inheritance is useful when you have an existing class, and you want to build a n
 #### Example: Inheriting from the Monster Class
 
 Let's use our `Monster` class to illustrate inheritance. We will create a base class `Monster` and then create different types of monsters that inherit from this base class. Each monster type will have its own unique features and behaviors.
-
-
 
 ### Polymorphism
 
