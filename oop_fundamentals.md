@@ -357,7 +357,7 @@ class Car:
     ...
 
     private function start_combustion():
-        // code to start combustion
+        # code to start combustion
     END function
 
 END class
