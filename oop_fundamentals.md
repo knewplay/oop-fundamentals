@@ -365,6 +365,8 @@ END class
 
 > Note: This is pseudocode. Different programming languages have different ways to specify whether a function is public or private. In this example, we indicate whether a function is public or private directly in front of the function definition.
 
+And this is the whole point of abstraction: we just care about calling the method, not about how it's implemented.
+
 #### Example: Abstracting Monster Class Details
 
 Similarly, in a video game, you might have a `Monster` class where only certain methods and attributes are exposed to other parts of the program. Here’s an example:
