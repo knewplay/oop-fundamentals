@@ -388,6 +388,7 @@ class Monster:
     # Public method to make the monster attack
     public function attack():
         print("The monster attacks!")
+        # Define the attack mechanics here
     END function
 
     # Private method to calculate damage
