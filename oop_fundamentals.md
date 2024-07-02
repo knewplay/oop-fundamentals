@@ -529,6 +529,8 @@ In OOP, polymorphism is the ability of different objects to respond differently 
 
 #### Example: Polymorphism with the Monster Class
 
+Let's revisit our `Monster` class and its subclasses, but with some minor changes:
+
 ```python
 # ======== Base Class ========
 class Monster:
@@ -582,5 +584,25 @@ class Zombie extends Monster:
     END function
 END class
 ```
+
+In the `Monster` class, we define a base method called `attack()`. This method prints a generic message indicating that the monster attacks. The `Monster` class serves as a blueprint for creating different types of monsters, and each monster can have its own way of attacking.
+
+To create specific types of monsters, we define subclasses such as `Goblin`, `Dragon`, and `Zombie`. Each subclass inherits from the `Monster` class and redefines the `attack()` method to provide its own specific implementation. This is how polymorphism works: the same method call (`attack()`) can produce different behaviors depending on the type of object it is called on.
+
+For example, in the `Goblin` class, the `attack()` method is redefined to have the goblin swing a club. Similarly, the `Dragon` class redefines the `attack()` method to breathe fire, and the `Zombie` class redefines specifies attacking as biting.
+
+Now, let's create instances of these subclasses and call the `attack()` method on each:
+
+```python
+goblin = Goblin(50, 30, 70)
+dragon = Dragon(300, 200, 500)
+zombie = Zombie(70, 50, 10)
+
+goblin.attack()  # Output: The Goblin swings a club!
+dragon.attack()  # Output: The Dragon breathes fire!
+zombie.attack()  # Output: The Zombie bites viciously!
+```
+
+When we call `attack()` on each of these objects, the specific implementation of the `attack()` method in each subclass is executed. This demonstrates polymorphism: the ability to use the same method call on different objects, with each object responding in its own way. Polymorphism allows us to write more flexible and extensible code, as new types of monsters can be added with their own unique behaviors without altering the existing code structure.
 
 ### Encapsulation
