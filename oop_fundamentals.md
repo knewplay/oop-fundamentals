@@ -500,6 +500,20 @@ Let's dive deeper into the `Goblin` constructor. When we create a new `Goblin` o
 
 The constructors for the `Dragon` and `Zombie` classes work similarly. They call the `super` constructor to initialize the inherited attributes and then set their unique attributes (`fire_power` for `Dragon` and `decay_level` for `Zombie`). This way, each subclass can build upon the base class while adding its own specialized features.
 
+An interesting aspect is that you can still do this:
+
+```python
+goblin = Goblin(50, 30, 70)
+dragon = Dragon(300, 200, 500)
+zombie = Zombie(70, 50, 10)
+
+goblin.attack()    # Output: The monster attacks!
+dragon.attack()     # Output: The monster attacks!
+zombie.attack()  # Output: The monster attacks!
+```
+
+Even though we didn't define the `attack()` method inside the subclasses, the base class had it so the subclasses inherit it. Since the subclasses inherit attributes and methods of the base class, they can use the attack() method defined in the Monster class.
+
 This example shows how inheritance allows us to define a common set of attributes and methods in a base class (`Monster`) and then extend this functionality in subclasses (`Goblin`, `Dragon`, `Zombie`). Each subclass inherits the properties and behaviors of the base class but can also introduce its own unique features.
 
 ### Polymorphism
