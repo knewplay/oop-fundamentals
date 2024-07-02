@@ -410,7 +410,7 @@ In this example, the Monster class has a constructor to initialize its attribute
 Inheritance is a very powerful feature in OOP. It allows classes to inherit behaviors and attributes from each other, forming hierarchies. This promotes code reusability and helps in building new classes based on existing ones without having to rewrite code.
 
 ![Family inheritance](./figures/inheritance-family.jpg)
-*Family with children inheriting features from their parents: The son has his dad's curly hair and his mom's eye color and hair color, while the daughter has her dad's eye color and her mom's straight hair and hair color.*
+*Family with children inheriting features from their parents: The son has his dad's curly hair and his mom's eye and hair color, while the daughter has her mom's straight hair and her dad's eye and hair color.*
 
 Imagine this: we have to model a fleet of vehicles for a company. They have trucks, buses, and regular sedans. We can create a `Vehicle` class that includes shared attributes and methods common to all vehicles, such as speed, fuel capacity, and the ability to start and stop. This `Vehicle` class provides a foundation for creating more specific vehicle types, allowing us to efficiently manage common features and behaviors.
 
