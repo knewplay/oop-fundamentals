@@ -416,11 +416,111 @@ Imagine this: we have to model a fleet of vehicles for a company. They have truc
 ![Car class hierarchies](./figures/inheritance-car.jpg)
 *Different types of vehicles inheriting common features from a base `Vehicle` class.*
 
-Inheritance is useful when you have an existing class, and you want to build a new class that uses the features of the previous class but with additional functionalities. Classes derived from an existing class are called subclasses, extended classes, or child classes. The class from which the subclass is derived can be referred to as the superclass, parent class, or base class.
+Inheritance is useful when you have an existing class, and you want to build a new class that uses the features of the previous class but with additional features and functionalities. Classes derived from an existing class are called subclasses, extended classes, or child classes. The class from which the subclass is derived can be referred to as the superclass, parent class, or base class.
 
 #### Example: Inheriting from the Monster Class
 
-Let's use our `Monster` class to illustrate inheritance. We will create a base class `Monster` and then create different types of monsters that inherit from this base class. Each monster type will have its own unique features and behaviors.
+Let's use our `Monster` class to illustrate inheritance. Here is our class `Monster`:
+
+```python
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(health, energy):
+        this.health = health
+        this.energy = energy
+    END function
+
+    # Base method for attack
+    public function attack():
+        print("The monster attacks!")
+        # Define the attack mechanics here
+    END function
+END class
+```
+
+Note that I have removed the `name` attribute from the constructor. This is because each subclass will represent a specific type of monster, making the `name` attribute redundant.
+
+Now, we will create subclasses for specific types of monsters, such as Goblin, Dragon, and Zombie. Each subclass will inherit from the `Monster` class and can add its own unique attributes and methods:
+
+```python
+# ======== Subclasses ========
+# ======== Subclasses ========
+class Goblin extends Monster:
+    function Goblin(health, energy, stealth_level):
+        this.super(health, energy)
+        this.stealth_level = stealth_level  # Unique attribute for Goblin
+    END function
+
+    public function attack():
+        print("The Goblin swings a club!")
+        # Define the attack mechanics for the Goblin here
+    END function
+    
+    public function hide():
+        print("The Goblin hides in the shadows!")
+        # Define the hiding mechanics here
+    END function
+END class
+
+class Dragon extends Monster:
+    function Dragon(health, energy, fire_power):
+        this.super(health, energy)
+        this.fire_power = fire_power  # Unique attribute for Dragon
+    END function
+
+    public function attack():
+        print("The Dragon breathes fire!")
+        # Define the attack mechanics for the Dragon here
+    END function
+
+    public function fly():
+        print("The Dragon takes to the skies!")
+        # Define the flying mechanics here
+    END function
+END class
+
+class Zombie extends Monster:
+    function Zombie(health, energy, decay_level):
+        this.super(health, energy)
+        this.decay_level = decay_level  # Unique attribute for Zombie
+    END function
+
+    public function attack():
+        print("The Zombie bites viciously!")
+        # Define the attack mechanics for the Zombie here
+    END function
+
+    public function regenerate():
+        print("The Zombie regenerates its health!")
+        # Define the regeneration mechanics here
+    END function
+END class
+```
+
+Now, we can create instances of these subclasses and call their methods:
+
+```python
+goblin = Goblin(50, 30, 70)
+dragon = Dragon(300, 200, 500)
+zombie = Zombie(70, 50, 10)
+
+goblin.attack()  # Output: The Goblin swings a club!
+goblin.hide()    # Output: The Goblin hides in the shadows!
+
+dragon.attack()  # Output: The Dragon breathes fire!
+dragon.fly()     # Output: The Dragon takes to the skies!
+
+zombie.attack()  # Output: The Zombie bites viciously!
+zombie.regenerate()  # Output: The Zombie regenerates its health!
+```
+
+Now you may be wondering, what is `this.super()` in the constructor of each subclass? The `super` keyword is used to call the constructor of the parent class. This ensures that the attributes defined in the `Monster` class, such as `health` and `energy`, are properly initialized in the subclasses. By using `this.super(health, energy)`, we are saying, "initialize these attributes in the parent class before adding any subclass-specific attributes or methods".
+
+Let's dive deeper into the `Goblin` constructor. When we create a new `Goblin` object, we pass the `health` (50), `energy` (30), and `stealth_level` (70) parameters. The `this.super(health, energy)` call in the `Goblin` constructor ensures that the `health` and `energy` attributes are initialized by the `Monster` class's constructor. Then, we set the `stealth_level` attribute specific to the `Goblin` class. This allows us to add additional attributes or methods that are unique to the `Goblin` class while still retaining the common attributes and methods defined in the `Monster` class.
+
+The constructors for the `Dragon` and `Zombie` classes work similarly. They call the `super` constructor to initialize the inherited attributes and then set their unique attributes (`fire_power` for `Dragon` and `decay_level` for `Zombie`). This way, each subclass can build upon the base class while adding its own specialized features.
+
+This example shows how inheritance allows us to define a common set of attributes and methods in a base class (`Monster`) and then extend this functionality in subclasses (`Goblin`, `Dragon`, `Zombie`). Each subclass inherits the properties and behaviors of the base class but can also introduce its own unique features.
 
 ### Polymorphism
 
