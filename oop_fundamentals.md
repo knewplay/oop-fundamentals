@@ -346,17 +346,17 @@ class Car:
         start_combustion()
     END function
 
-    private function _engage_ignition_switch():
+    private function engage_ignition_switch():
         # code to engage ignition switch
     END function
 
-    private function _send_power_from_battery():
+    private function send_power_from_battery():
         # code to send power from battery
     END function
 
     ...
 
-    private function _start_combustion():
+    private function start_combustion():
         // code to start combustion
     END function
 
