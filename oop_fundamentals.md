@@ -527,4 +527,60 @@ This approach allows the President to govern effectively without getting bogged 
 
 In OOP, polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes, facilitating the process of having multiple classes that can be treated the same way.
 
+#### Example: Polymorphism with the Monster Class
+
+```python
+# ======== Base Class ========
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(health, energy):
+        this.health = health
+        this.energy = energy
+    END function
+
+    # Base method for attack
+    public function attack():
+        print("The monster attacks!")
+        # Define the attack mechanics here
+    END function
+END class
+
+# ======== Subclasses ========
+class Goblin extends Monster:
+    function Goblin(health, energy, stealth_level):
+        this.super(health, energy)
+        this.stealth_level = stealth_level  # Unique attribute for Goblin
+    END function
+
+    public function attack():
+        print("The Goblin swings a club!")
+        # Define the attack mechanics for the Goblin here
+    END function
+END class
+
+class Dragon extends Monster:
+    function Dragon(health, energy, fire_power):
+        this.super(health, energy)
+        this.fire_power = fire_power  # Unique attribute for Dragon
+    END function
+
+    public function attack():
+        print("The Dragon breathes fire!")
+        # Define the attack mechanics for the Dragon here
+    END function
+END class
+
+class Zombie extends Monster:
+    function Zombie(health, energy, decay_level):
+        this.super(health, energy)
+        this.decay_level = decay_level  # Unique attribute for Zombie
+    END function
+
+    public function attack():
+        print("The Zombie bites viciously!")
+        # Define the attack mechanics for the Zombie here
+    END function
+END class
+```
+
 ### Encapsulation
