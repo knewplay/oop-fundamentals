@@ -444,18 +444,12 @@ Now, we will create subclasses for specific types of monsters, such as Goblin, D
 
 ```python
 # ======== Subclasses ========
-# ======== Subclasses ========
 class Goblin extends Monster:
     function Goblin(health, energy, stealth_level):
         this.super(health, energy)
         this.stealth_level = stealth_level  # Unique attribute for Goblin
     END function
 
-    public function attack():
-        print("The Goblin swings a club!")
-        # Define the attack mechanics for the Goblin here
-    END function
-    
     public function hide():
         print("The Goblin hides in the shadows!")
         # Define the hiding mechanics here
@@ -468,11 +462,6 @@ class Dragon extends Monster:
         this.fire_power = fire_power  # Unique attribute for Dragon
     END function
 
-    public function attack():
-        print("The Dragon breathes fire!")
-        # Define the attack mechanics for the Dragon here
-    END function
-
     public function fly():
         print("The Dragon takes to the skies!")
         # Define the flying mechanics here
@@ -483,11 +472,6 @@ class Zombie extends Monster:
     function Zombie(health, energy, decay_level):
         this.super(health, energy)
         this.decay_level = decay_level  # Unique attribute for Zombie
-    END function
-
-    public function attack():
-        print("The Zombie bites viciously!")
-        # Define the attack mechanics for the Zombie here
     END function
 
     public function regenerate():
@@ -504,13 +488,8 @@ goblin = Goblin(50, 30, 70)
 dragon = Dragon(300, 200, 500)
 zombie = Zombie(70, 50, 10)
 
-goblin.attack()  # Output: The Goblin swings a club!
 goblin.hide()    # Output: The Goblin hides in the shadows!
-
-dragon.attack()  # Output: The Dragon breathes fire!
 dragon.fly()     # Output: The Dragon takes to the skies!
-
-zombie.attack()  # Output: The Zombie bites viciously!
 zombie.regenerate()  # Output: The Zombie regenerates its health!
 ```
 
