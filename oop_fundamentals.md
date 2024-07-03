@@ -628,4 +628,45 @@ To make this concept more intuitive, let's consider an example with a dog. We'll
 ![Dog private public access](./figures/)
 *The dog's private attributes and methods are only accessible through its public methods.*
 
-Encapsulation ensures that the internal state of the object is protected and can only be changed in a controlled manner through well-defined interfaces (public methods), restricting direct access to some of the object's components to prevent unintended interference and misuse.
+In this manner, we are ensuring that the internal state of the object is protected and can only be changed in a controlled manner through well-defined interfaces (public methods), restricting direct access to some of the object's components to prevent unintended interference and misuse.
+
+These principles build on the concepts we have already discussed, particularly abstraction. Below is the code that represents the Dog class:
+
+```python
+class Dog:
+    # Constructor to initialize the dog's attributes
+    function Dog(mood, hunger, energy):
+        this.mood = mood
+        this.hunger = hunger
+        this.energy = energy
+    END function
+
+    # Private method to bark
+    private function bark():
+        print("Woof! Woof!")
+    END function
+
+    # Public method to sleep, increases energy and hunger
+    public function sleep():
+        this.energy += 10
+        this.hunger += 5
+    END function
+
+    # Public method to play, increases mood, decreases energy, and triggers bark
+    public function play():
+        this.mood += 10
+        this.energy -= 10
+        this.bark()
+    END function
+
+    # Public method to feed, decreases hunger and increases mood
+    public function feed():
+        this.hunger -= 10
+        this.mood += 5
+        this.bark()
+    END function
+END class
+```
+
+#### Example: Encapsulating Monster Class Details
+
