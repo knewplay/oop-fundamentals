@@ -620,3 +620,12 @@ zombie.attack()  # Output: The Zombie bites viciously!
 When we call `attack()` on each of these objects, the specific implementation of the `attack()` method in each subclass is executed. This demonstrates polymorphism: the ability to use the same method call on different objects, with each object responding in its own way. Polymorphism allows us to write more flexible and extensible code, as new types of monsters can be added with their own unique behaviors without altering the existing code structure.
 
 ### Encapsulation
+
+Encapsulation is the fourth and final pillar of OOP. It revolves around restricting direct access to some of the object's components, protecting the internal state of the object from unintended interference and misuse. This concept is built on the idea of "data hiding", which is related to abstraction.
+
+To make this concept more intuitive, let's consider an example with a dog. We'll create a `Dog` class that has private attributes such as `mood`, `hunger`, and `energy`, and a private method `bark()`. These private attributes and methods can only be accessed and modified through public methods such as `sleep()`, `play()`, and `feed()`.
+
+![Dog private public access](./figures/)
+*The dog's private attributes and methods are only accessible through its public methods.*
+
+Encapsulation ensures that the internal state of the object is protected and can only be changed in a controlled manner through well-defined interfaces (public methods), restricting direct access to some of the object's components to prevent unintended interference and misuse.
