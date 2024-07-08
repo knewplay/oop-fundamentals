@@ -720,3 +720,42 @@ END class
 ```
 
 > **Note:** For simplicity, let's imagine we can create a generic monster without using subclasses or specific names.
+
+In this example, the `roar()` method is private, meaning it cannot be called directly from outside the Monster class. Instead, we use the public method `perform_attack()` to access the `roar()` method and simulate the monster's attack. Additionally, we have a public method `display_status()` to show the monster's current status and a `take_damage()` method to handle damage taken by the monster.
+
+By encapsulating the `roar()` method, we ensure that the roar behavior is protected and can only be triggered in a controlled manner through the `perform_attack()` or `take_damage()` methods. This approach helps prevent unintended interference with the monster's behavior.
+
+To demonstrate how encapsulation works in practice, let's create a Monster object and interact with it using the public methods:
+
+```python
+monster = Monster(50, 30)
+
+# Display the monster's status
+monster.display_status()
+
+# Perform an attack
+monster.perform_attack()
+
+# Try to directly access the private roar method (this will result in an error)
+# monster.roar()  # Uncommenting this line will cause an error
+
+# Inflict damage to the monster
+monster.take_damage(20)
+monster.display_status()
+```
+
+Which will output:
+
+```python
+Health: 50
+Energy: 30
+The monster roars menacingly!
+The monster attacks!
+Health: 50
+Energy: 20
+The monster roars menacingly!
+Health: 30
+Energy: 20
+```
+
+In this way, encapsulation ensures that we interact with the Monster object through its public methods, maintaining control over how its internal state and behaviors are accessed and modified.
