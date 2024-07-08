@@ -679,8 +679,11 @@ By encapsulating the `bark()` method and the attributes `mood`, `hunger`, and `e
 
 #### Example: Encapsulating Monster Class Details
 
+To illustrate encapsulation, let's use our Monster class example. Here is our class Monster:
+
 ```python
 class Monster:
+    class Monster:
     # Constructor to initialize the monster's attributes
     function Monster(health, energy):
         this.health = health
@@ -706,17 +709,12 @@ class Monster:
         print("Energy: " + this.energy)
     END function
 
-    # Getter for health
-    public function get_health():
-        return this.health
-    END function
-
-    # Setter for health
-    public function set_health(new_health):
-        if new_health >= 0:
-            this.health = new_health
-        else:
-            print("Invalid health value")
+    # Method to handle taking damage
+    public function take_damage(damage_amount):
+        this.health -= damage_amount
+        if this.health < 0:
+            this.health = 0
+        this.roar()
     END function
 END class
 ```
