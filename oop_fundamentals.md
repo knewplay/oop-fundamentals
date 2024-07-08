@@ -670,3 +670,46 @@ END class
 
 #### Example: Encapsulating Monster Class Details
 
+```python
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(health, energy):
+        this.health = health
+        this.energy = energy
+    END function
+
+    # Private method to simulate the monster's roar
+    private function roar():
+        print("The monster roars menacingly!")
+    END function
+
+    # Public method to perform an attack action
+    public function perform_attack():
+        this.energy -= 10
+        this.roar()
+        print("The monster attacks!")
+        # Define the attack mechanics here
+    END function
+
+    # Public method to display the monster's status
+    public function display_status():
+        print("Health: " + this.health)
+        print("Energy: " + this.energy)
+    END function
+
+    # Getter for health
+    public function get_health():
+        return this.health
+    END function
+
+    # Setter for health
+    public function set_health(new_health):
+        if new_health >= 0:
+            this.health = new_health
+        else:
+            print("Invalid health value")
+    END function
+END class
+```
+
+> **Note:** For simplicity, let's imagine we can create a generic monster without using subclasses or specific names.
