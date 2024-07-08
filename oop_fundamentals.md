@@ -679,7 +679,7 @@ By encapsulating the `bark()` method and the attributes `mood`, `hunger`, and `e
 
 #### Example: Encapsulating Monster Class Details
 
-To illustrate encapsulation, let's use our Monster class example. Here is our class Monster:
+To illustrate encapsulation, let's use our `Monster` class example. Here is our class `Monster`:
 
 ```python
 class Monster:
