@@ -628,9 +628,7 @@ To make this concept more intuitive, let's consider an example with a dog. We'll
 ![Dog private public access](./figures/)
 *The dog's private attributes and methods are only accessible through its public methods.*
 
-In this manner, we are ensuring that the internal state of the object is protected and can only be changed in a controlled manner through well-defined interfaces (public methods), restricting direct access to some of the object's components to prevent unintended interference and misuse.
-
-These principles build on the concepts we have already discussed, particularly abstraction. Below is the code that represents the Dog class:
+Let's now take a look at the code-equivalent of this example. Below is the code that represents the `Dog` class:
 
 ```python
 class Dog:
@@ -667,6 +665,17 @@ class Dog:
     END function
 END class
 ```
+
+Now, let's analyze this code to understand how encapsulation works in the Dog class.
+
+- `bark()` is a private method, meaning it cannot be called directly from outside the Dog class.
+- The `sleep()` method is public and increases the dog's energy and hunger.
+- The `play()` method is public, increases the dog's mood, decreases energy, and calls the private `bark()` method.
+- The `feed()` method is public, decreases the dog's hunger, increases its mood, and also calls the private `bark()` method.
+
+Encapsulation ensures that the internal state of the `Dog` object is protected and can only be changed in a controlled manner through well-defined interfaces (public methods). This restricts direct access to some of the object's components to prevent unintended interference and misuse.
+
+By encapsulating the `bark()` method and the attributes `mood`, `hunger`, and `energy`, we ensure that these elements are protected and can only be accessed and modified through the specified public methods. This helps maintain the integrity and consistency of the `Dog` object's state, making the code more reliable and easier to maintain.
 
 #### Example: Encapsulating Monster Class Details
 
