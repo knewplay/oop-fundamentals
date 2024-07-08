@@ -721,7 +721,9 @@ dog.display_status()
 # dog.bark()  # Uncommenting this line will cause an error
 ```
 
+In this code snippet, we first create a Dog object with mood set to 50, hunger at 30, and energy at 70. As we call the public methods `play()`, `sleep()`, and `feed()` the private attributes are modified and displayed accordingly.
 
+Additionally, the `bark()` method is private and cannot be called directly from outside the class. Uncommenting `dog.bark()` will result in an error because encapsulation restricts access to private methods. This ensures that the dog's internal state and behaviors are only modified through the controlled interfaces provided by the public methods (`play()`, `sleep()`, and `feed()`).
 
 #### Example: Encapsulating Monster Class Details
 
