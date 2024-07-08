@@ -677,6 +677,52 @@ Encapsulation ensures that the internal state of the `Dog` object is protected a
 
 By encapsulating the `bark()` method and the attributes `mood`, `hunger`, and `energy`, we ensure that these elements are protected and can only be accessed and modified through the specified public methods. This helps maintain the integrity and consistency of the `Dog` object's state, making the code more reliable and easier to maintain.
 
+Now let's create a Dog object and interact with it using its public methods:
+
+```python
+dog = Dog(50, 30, 70)  # mood, hunger, energy
+
+# The dog plays
+dog.play()
+# Output: Woof! Woof!
+# After playing: Mood +10, Energy -10
+
+# Display the dog's status
+dog.display_status()
+# Output:
+# Mood: 60
+# Hunger: 30
+# Energy: 60
+
+# The dog sleeps
+dog.sleep()
+# After sleeping: Energy +10, Hunger +5
+
+# Display the dog's status
+dog.display_status()
+# Output:
+# Mood: 60
+# Hunger: 35
+# Energy: 70
+
+# The dog is fed
+dog.feed()
+# Output: Woof! Woof!
+# After feeding: Hunger -10, Mood +5
+
+# Display the dog's status
+dog.display_status()
+# Output:
+# Mood: 65
+# Hunger: 25
+# Energy: 70
+
+# Try to directly access the private bark method (this will result in an error)
+# dog.bark()  # Uncommenting this line will cause an error
+```
+
+
+
 #### Example: Encapsulating Monster Class Details
 
 To illustrate encapsulation, let's use our `Monster` class example. Here is our class `Monster`:
