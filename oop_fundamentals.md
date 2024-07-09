@@ -831,3 +831,15 @@ Let's start by defining the main entities in our game: the `Player` and the `Mon
 - `Zombie`: Another subclass of `Monster` with its own unique attributes and methods.
 
 We'll create a simple game scenario where the player encounters different types of monsters and interacts with them using the principles of OOP.
+
+### Defining the Classes
+
+Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate file. This way, our code is modular and easier to manage. For instance:
+
+- `monster.py`: Contains the base `Monster` class.
+- `goblin.py`: Contains the `Goblin` class, which inherits from `Monster`.
+- `zombie.py`: Contains the `Zombie` class, which inherits from `Monster`.
+- `player.py`: Contains the `Player` class.
+- `main.py`: Contains the main game logic and interactions.
+
+By structuring our files this way, we ensure that each class is self-contained and can be easily maintained or extended in the future.
