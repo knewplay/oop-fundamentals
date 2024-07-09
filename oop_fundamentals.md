@@ -820,3 +820,14 @@ In a typical 2D game, various components work together to create an immersive an
 Of course, there are many complex elements involved in developing a complete game. For our purposes, we will simplify this example by focusing solely on the core game logic. We will create a simplified game simulation involving a `Player` class and a `Monster` class, along with two subclasses of `Monster`: `Goblin` and `Zombie`. This example aims to demonstrate how different entities can interact within a game environment, showcasing how OOP principles like inheritance, polymorphism, and encapsulation can be used to model complex systems. This will help you understand the design and logic behind game mechanics, making it easier to manage and extend the code.
 
 In this simplified example, we won't deal with graphics, sound, or user input. Instead, we'll focus on the interactions between the player and the monsters, emphasizing how OOP principles can be applied to create an organized and maintainable structure for the game's logic.
+
+### Game Classes and Interactions
+
+Let's start by defining the main entities in our game: the `Player` and the `Monster`, with its subclasses `Goblin` and `Zombie`. Here's how these classes interact:
+
+- `Player`: The player character, with attributes such as health and energy, and methods to attack and defend.
+- `Monster`: A base class for all monsters, with common attributes and methods.
+- `Goblin`: A subclass of `Monster` with unique attributes and methods.
+- `Zombie`: Another subclass of `Monster` with its own unique attributes and methods.
+
+We'll create a simple game scenario where the player encounters different types of monsters and interacts with them using the principles of OOP.
