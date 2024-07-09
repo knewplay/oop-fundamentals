@@ -32,6 +32,8 @@ In this article, you'll be introduced to Object-Oriented Programming (OOP), a me
 - [Polymorphism](#polymorphism)
 - [Encapsulation](#encapsulation)
 
+[Bringing It All Together: A Game Example](#bringing-it-all-together-a-game-example)
+
 ## Introduction to Object-Oriented Programming
 
 ### What is OOP?
@@ -807,3 +809,5 @@ Energy: 20
 ```
 
 In this way, encapsulation ensures that we interact with the Monster object through its public methods, maintaining control over how its internal state and behaviors are accessed and modified.
+
+## Bringing It All Together: A Game Example
