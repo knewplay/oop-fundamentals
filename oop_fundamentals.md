@@ -847,7 +847,7 @@ By structuring our files this way, we ensure that each class is self-contained a
 Let's start by defining our base `Monster` class:
 
 ```python
-# monster.py
+# monster.cpp
 class Monster:
     # Constructor to initialize the monster's attributes
     function Monster(health, energy):
@@ -879,7 +879,7 @@ END class
 Next, we define the `Goblin` and `Zombie` subclasses that inherit from `Monster`:
 
 ```python
-# goblin.py
+# goblin.cpp
 class Goblin extends Monster:
     function Goblin(health, energy, stealth_level):
         this.super(health, energy)
@@ -892,7 +892,7 @@ class Goblin extends Monster:
     END function
 END class
 
-# zombie.py
+# zombie.cpp
 class Zombie extends Monster:
     function Zombie(health, energy, decay_level):
         this.super(health, energy)
@@ -909,7 +909,7 @@ END class
 We also need a `Player` class to interact with our monsters:
 
 ```python
-# player.py
+# player.cpp
 class Player:
     function Player(name, health, energy):
         this.name = name
