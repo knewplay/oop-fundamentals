@@ -625,6 +625,9 @@ When we call `attack()` on each of these objects, the specific implementation of
 
 Encapsulation is the fourth and final pillar of OOP. It revolves around restricting direct access to some of the object's components, protecting the internal state of the object from unintended interference and misuse. This concept is built on the idea of "data hiding", which is related to abstraction.
 
+![Capsule encapsulation](./figures/encapsulation-capsule.jpg)
+*Encapsulation represents protecting an object's internal state.*
+
 To make this concept more intuitive, let's consider an example with a dog. We'll create a `Dog` class that has private attributes such as `mood`, `hunger`, and `energy`, and a private method `bark()`. These private attributes and methods can only be accessed and modified through public methods such as `sleep()`, `play()`, and `feed()`.
 
 ![Dog private public access](./figures/)
