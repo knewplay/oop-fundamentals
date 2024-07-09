@@ -875,3 +875,56 @@ class Monster:
     END function
 END class
 ```
+
+Next, we define the `Goblin` and `Zombie` subclasses that inherit from `Monster`:
+
+```python
+# goblin.py
+class Goblin extends Monster:
+    function Goblin(health, energy, stealth_level):
+        this.super(health, energy)
+        this.stealth_level = stealth_level
+    END function
+
+    public function attack():
+        print("The Goblin swings a club!")
+        # Define the attack mechanics for the Goblin here
+    END function
+END class
+
+# zombie.py
+class Zombie extends Monster:
+    function Zombie(health, energy, decay_level):
+        this.super(health, energy)
+        this.decay_level = decay_level
+    END function
+
+    public function attack():
+        print("The Zombie bites viciously!")
+        # Define the attack mechanics for the Zombie here
+    END function
+END class
+```
+
+We also need a `Player` class to interact with our monsters:
+
+```python
+# player.py
+class Player:
+    function Player(name, health, energy):
+        this.name = name
+        this.health = health
+        this.energy = energy
+    END function
+
+    public function attack(monster):
+        print(this.name + " attacks the " + monster.__class__.__name__)
+        monster.perform_attack()
+    END function
+
+    public function display_status():
+        print("Player Health: " + this.health)
+        print("Player Energy: " + this.energy)
+    END function
+END class
+```
