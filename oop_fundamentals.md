@@ -821,7 +821,7 @@ Of course, there are many complex elements involved in developing a complete gam
 
 In this simplified example, we won't deal with graphics, sound, or user input. Instead, we'll focus on the interactions between the player and the monsters, emphasizing how OOP principles can be applied to create an organized and maintainable structure for the game's logic.
 
-### Game Classes and Interactions
+### Game Classes and Interactions Overview
 
 Let's start by defining the main entities in our game: the `Player` and the `Monster`, with its subclasses `Goblin` and `Zombie`. Here's how these classes interact:
 
@@ -929,6 +929,8 @@ class Player:
 END class
 ```
 
+### Game Simulation
+
 Finally, we bring everything together in our `main.py` file. The purpose of this file is to manage the overall game logic and interactions between different classes. It will create instances of the player and monsters and simulate interactions:
 
 ```python
@@ -952,3 +954,16 @@ def main():
     goblin.display_status()
     zombie.display_status()
 ```
+
+Let's go through the `main.cpp` file step by step:
+
+#### 1. Importing Classes
+
+```python
+from goblin import Goblin
+from zombie import Zombie
+from player import Player
+```
+
+**Explanation:** The first part of the file imports the necessary classes from their respective modules. This includes the Goblin, Zombie, and Player classes. By doing this, we can use these classes and their methods within the main.py file.
+Concepts Used: This demonstrates the modularity and organization in OOP, where each class is defined in its own file, making the codebase more manageable and reusable.
