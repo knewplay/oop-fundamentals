@@ -918,7 +918,7 @@ class Player:
     END function
 
     public function attack(monster):
-        print(this.name + " attacks the " + monster.__class__.__name__)
+        print(this.name + " attacks the " + monster.get_type())
         monster.perform_attack()
     END function
 
@@ -927,4 +927,28 @@ class Player:
         print("Player Energy: " + this.energy)
     END function
 END class
+```
+
+Finally, we bring everything together in our `main.py` file. The purpose of this file is to manage the overall game logic and interactions between different classes. It will create instances of the player and monsters and simulate interactions:
+
+```python
+# main.py
+from goblin import Goblin
+from zombie import Zombie
+from player import Player
+
+def main():
+    goblin = Goblin(50, 30, 70)
+    zombie = Zombie(70, 50, 10)
+    player = Player("Hero", 100, 100)
+
+    player.display_status()
+    goblin.display_status()
+    zombie.display_status()
+
+    player.attack(goblin)
+    player.attack(zombie)
+
+    goblin.display_status()
+    zombie.display_status()
 ```
