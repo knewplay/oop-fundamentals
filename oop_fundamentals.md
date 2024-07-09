@@ -834,7 +834,7 @@ We'll create a simple game scenario where the player encounters different types 
 
 ### Defining the Classes
 
-Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate conceptual module or file. While we use the `.cpp` extension here (for C++) for clarity, this structure can apply to any Object-Oriented Programming (OOP) language. Each class should be self-contained, making the code easier to maintain and extend. Here's an example of how you might structure the files:
+Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate conceptual module or file. While we use the `.cpp` extension here (for C++) for clarity (indicating C++ files), this structure can apply to any Object-Oriented Programming (OOP) language. Each class should be self-contained, making the code easier to maintain and extend. Here's an example of how you might structure the files:
 
 - `monster.cpp`: Contains the base `Monster` class.
 - `goblin.cpp`: Contains the `Goblin` class, which inherits from `Monster`.
