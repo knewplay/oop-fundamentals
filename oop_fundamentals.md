@@ -811,3 +811,7 @@ Energy: 20
 In this way, encapsulation ensures that we interact with the Monster object through its public methods, maintaining control over how its internal state and behaviors are accessed and modified.
 
 ## Bringing It All Together: A Game Example
+
+In a typical 2D game, various components work together to create an immersive and interactive experience. These components include graphics rendering, user input handling, physics simulations, sound effects, and game logic. Graphics rendering involves drawing the game characters, environment, and other visual elements on the screen. User input handling processes player actions, such as moving a character or pressing a button. Physics simulations manage how objects interact with each other, including collision detection and movement. Sound effects add auditory feedback, enhancing the player's engagement.
+
+Of course, there are many complex elements involved in developing a complete game. For our purposes, we will simplify this example by focusing solely on the core game logic. We will create a simplified game simulation involving a `Player` class and a `Monster` class, along with two subclasses of `Monster`: `Goblin` and `Zombie`. This example aims to demonstrate how different entities can interact within a game environment, showcasing how OOP principles like inheritance, polymorphism, and encapsulation can be used to model complex systems. This will help you understand the design and logic behind game mechanics, making it easier to manage and extend the code.
