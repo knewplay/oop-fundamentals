@@ -843,3 +843,35 @@ Before diving into the code, let's discuss how to organize our classes. In a rea
 - `main.py`: Contains the main game logic and interactions.
 
 By structuring our files this way, we ensure that each class is self-contained and can be easily maintained or extended in the future.
+
+Let's start by defining our base `Monster` class:
+
+```python
+# monster.py
+class Monster:
+    # Constructor to initialize the monster's attributes
+    function Monster(health, energy):
+        this.health = health
+        this.energy = energy
+    END function
+
+    # Private method to simulate the monster's roar
+    private function roar():
+        print("The monster roars menacingly!")
+    END function
+
+    # Public method to perform an attack action
+    public function perform_attack():
+        this.energy -= 10
+        this.roar()
+        print("The monster attacks!")
+        # Define the attack mechanics here
+    END function
+
+    # Public method to display the monster's status
+    public function display_status():
+        print("Health: " + this.health)
+        print("Energy: " + this.energy)
+    END function
+END class
+```
