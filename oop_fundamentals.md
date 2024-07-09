@@ -834,13 +834,13 @@ We'll create a simple game scenario where the player encounters different types 
 
 ### Defining the Classes
 
-Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate file. This way, our code is modular and easier to manage. For instance:
+Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate conceptual module or file. While we use the `.cpp` extension here (for C++) for clarity, this structure can apply to any Object-Oriented Programming (OOP) language. Each class should be self-contained, making the code easier to maintain and extend. Here's an example of how you might structure the files:
 
-- `monster.py`: Contains the base `Monster` class.
-- `goblin.py`: Contains the `Goblin` class, which inherits from `Monster`.
-- `zombie.py`: Contains the `Zombie` class, which inherits from `Monster`.
-- `player.py`: Contains the `Player` class.
-- `main.py`: Contains the main game logic and interactions.
+- `monster.cpp`: Contains the base `Monster` class.
+- `goblin.cpp`: Contains the `Goblin` class, which inherits from `Monster`.
+- `zombie.cpp`: Contains the `Zombie` class, which inherits from `Monster`.
+- `player.cpp`: Contains the `Player` class.
+- `main.cpp`: Contains the main game logic and interactions.
 
 By structuring our files this way, we ensure that each class is self-contained and can be easily maintained or extended in the future.
 
