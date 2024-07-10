@@ -939,20 +939,19 @@ from goblin.cpp import Goblin
 from zombie.cpp import Zombie
 from player.cpp import Player
 
-def main():
-    goblin = Goblin(50, 30, 70)
-    zombie = Zombie(70, 50, 10)
-    player = Player("Hero", 100, 100)
+goblin = Goblin(50, 30, 70)
+zombie = Zombie(70, 50, 10)
+player = Player("Hero", 100, 100)
 
-    player.display_status()
-    goblin.display_status()
-    zombie.display_status()
+player.display_status()
+goblin.display_status()
+zombie.display_status()
 
-    player.attack(goblin)
-    player.attack(zombie)
+player.attack(goblin)
+player.attack(zombie)
 
-    goblin.display_status()
-    zombie.display_status()
+goblin.display_status()
+zombie.display_status()
 ```
 
 Let's go through the `main.cpp` file step by step:
@@ -972,3 +971,11 @@ from player.cpp import Player
   - Similarly, `from zombie.cpp import Zombie` and `from player.cpp import Player` import the `Zombie` and `Player` classes from their respective files.
 
 **Concepts Used:** Separating our classes into different files keeps our code organized and modular, making it easier to manage and maintain. By doing this, we avoid having one large file with too many lines of code and different entities. This organization makes our code more readable and easier to debug.
+
+#### 2. Defining the Main Function
+
+```python
+goblin = Goblin(50, 30, 70)
+zombie = Zombie(70, 50, 10)
+player = Player("Hero", 100, 100)
+```
