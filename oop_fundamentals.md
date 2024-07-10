@@ -966,9 +966,7 @@ from player.cpp import Player
 
 **Explanation:** The `from` and `import` statements are used to include code from other files into our current file. This allows us to use the classes and functions defined in those modules without having to rewrite them.
 
-- **`from` [module] `import` [class/function]:** This general statement tells the program to look in the specified module (file) and import the desired class or function from it.
-  - **Example:** `from goblin.cpp import Goblin` tells the program to look in the `goblin.cpp` file and import the `Goblin` class.
-  - Similarly, `from zombie.cpp import Zombie` and `from player.cpp import Player` import the `Zombie` and `Player` classes from their respective files.
+The **`from` [module] `import` [class/function]**  statement is used to tell the program to look in the specified file and import the desired class or function from it. For example, `from goblin.cpp import Goblin` tells the program to look in the `goblin.cpp` file and import the `Goblin` class.
 
 **Concepts Used:** Separating our classes into different files keeps our code organized and modular, making it easier to manage and maintain. By doing this, we avoid having one large file with too many lines of code and different entities. This organization makes our code more readable and easier to debug.
 
