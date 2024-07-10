@@ -964,7 +964,7 @@ from zombie.cpp import Zombie
 from player.cpp import Player
 ```
 
-**Explanation:** The `from` and `import` statements are used to include code from other files (modules) into our current file. This allows us to use the classes and functions defined in those modules without having to rewrite them.
+**Explanation:** The `from` and `import` statements are used to include code from other files into our current file. This allows us to use the classes and functions defined in those modules without having to rewrite them.
 
 - **`from` [module] `import` [class/function]:** This general statement tells the program to look in the specified module (file) and import the desired class or function from it.
   - **Example:** `from goblin.cpp import Goblin` tells the program to look in the `goblin.cpp` file and import the `Goblin` class.
@@ -996,6 +996,24 @@ goblin.display_status()
 zombie.display_status()
 ```
 
-**Explanation:** We use the `display_status()` method on each object to print their initial health and energy levels. This demonstrates encapsulation by showing how we interact with the objects through public methods.
+**Explanation:** The `display_status()` method is called on the `player`, `goblin`, and `zombie` objects to print their current health and energy levels.
 
-**Concepts Used:** Encapsulation ensures that the internal state of the objects is protected and can only be changed through well-defined public methods.
+**Concepts Used:** Encapsulation is demonstrated here as the display_status() method provides a controlled way to access and display the object's attributes.
+
+#### 4. Attacking Monsters
+
+```python
+player.attack(goblin)
+player.attack(zombie)
+```
+
+#### 5. Displaying Updated Statuses
+
+```python
+goblin.display_status()
+zombie.display_status()
+```
+
+**Explanation:** After the attacks, the `display_status()` method is called again on the goblin and zombie objects to show their updated health and energy levels.
+
+**Concepts Used:** This reiterates the use of encapsulation by showing the updated internal state of the objects through controlled methods.
