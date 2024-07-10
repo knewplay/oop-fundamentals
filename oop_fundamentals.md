@@ -972,10 +972,30 @@ from player.cpp import Player
 
 **Concepts Used:** Separating our classes into different files keeps our code organized and modular, making it easier to manage and maintain. By doing this, we avoid having one large file with too many lines of code and different entities. This organization makes our code more readable and easier to debug.
 
-#### 2. Defining the Main Function
+#### 2. Creating Instances
 
 ```python
 goblin = Goblin(50, 30, 70)
 zombie = Zombie(70, 50, 10)
 player = Player("Hero", 100, 100)
 ```
+
+**Explanation:** Within the main file, we create instances of the `Goblin`, `Zombie`, and `Player` classes. Each instance is initialized with specific values for their attributes. For example:
+
+- `Goblin(30, 20, 10)` creates a Goblin with 30 health, 20 energy, and a stealth level of 10.
+- `Zombie(70, 40, 5)` creates a Zombie with 70 health, 40 energy, and a decay level of 5.
+- `Player("Hero", 100, 50)` creates a Player named "Hero" with 100 health and 50 energy.
+
+**Concepts Used:** This shows the use of constructors to initialize objects with specific attributes.
+
+#### 3. Displaying Initial Statuses
+
+```python
+player.display_status()
+goblin.display_status()
+zombie.display_status()
+```
+
+**Explanation:** We use the `display_status()` method on each object to print their initial health and energy levels. This demonstrates encapsulation by showing how we interact with the objects through public methods.
+
+**Concepts Used:** Encapsulation ensures that the internal state of the objects is protected and can only be changed through well-defined public methods.
