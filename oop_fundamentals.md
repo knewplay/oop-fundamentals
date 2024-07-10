@@ -931,13 +931,13 @@ END class
 
 ### Game Simulation
 
-Finally, we bring everything together in our `main.py` file. The purpose of this file is to manage the overall game logic and interactions between different classes. It will create instances of the player and monsters and simulate interactions:
+Finally, we bring everything together in our `main.cpp` file. The purpose of this file is to manage the overall game logic and interactions between different classes. It will create instances of the player and monsters and simulate interactions:
 
 ```python
-# main.py
-from goblin import Goblin
-from zombie import Zombie
-from player import Player
+# main.cpp
+from goblin.cpp import Goblin
+from zombie.cpp import Zombie
+from player.cpp import Player
 
 def main():
     goblin = Goblin(50, 30, 70)
@@ -960,10 +960,15 @@ Let's go through the `main.cpp` file step by step:
 #### 1. Importing Classes
 
 ```python
-from goblin import Goblin
-from zombie import Zombie
-from player import Player
+from goblin.cpp import Goblin
+from zombie.cpp import Zombie
+from player.cpp import Player
 ```
 
-**Explanation:** The first part of the file imports the necessary classes from their respective modules. This includes the Goblin, Zombie, and Player classes. By doing this, we can use these classes and their methods within the main.py file.
-Concepts Used: This demonstrates the modularity and organization in OOP, where each class is defined in its own file, making the codebase more manageable and reusable.
+**Explanation:** The `from` and `import` statements are used to include code from other files (modules) into our current file. This allows us to use the classes and functions defined in those modules without having to rewrite them.
+
+- **`from` [module] `import` [class/function]:** This general statement tells the program to look in the specified module (file) and import the desired class or function from it.
+  - **Example:** `from goblin.cpp import Goblin` tells the program to look in the `goblin.cpp` file and import the `Goblin` class.
+  - Similarly, `from zombie.cpp import Zombie` and `from player.cpp import Player` import the `Zombie` and `Player` classes from their respective files.
+
+**Concepts Used:** Separating our classes into different files keeps our code organized and modular, making it easier to manage and maintain. By doing this, we avoid having one large file with too many lines of code and different entities. This organization makes our code more readable and easier to debug.
