@@ -890,6 +890,10 @@ class Goblin extends Monster:
         print("The Goblin swings a club!")
         # Define the attack mechanics for the Goblin here
     END function
+
+    public function get_type():
+        return "Goblin"
+    END function
 END class
 
 # zombie.cpp
@@ -902,6 +906,10 @@ class Zombie extends Monster:
     public function attack():
         print("The Zombie bites viciously!")
         # Define the attack mechanics for the Zombie here
+    END function
+
+    public function get_type():
+        return "Zombie"
     END function
 END class
 ```
@@ -996,7 +1004,7 @@ zombie.display_status()
 
 **Explanation:** The `display_status()` method is called on the `player`, `goblin`, and `zombie` objects to print their current health and energy levels.
 
-**Concepts Used:** Encapsulation is demonstrated here as the display_status() method provides a controlled way to access and display the object's attributes.
+**Concepts Used:** Encapsulation is demonstrated here as the `display_status()` method provides a controlled way to access and display the object's attributes. Furthermore, (polymorphism)
 
 #### 4. Attacking Monsters
 
@@ -1005,6 +1013,10 @@ player.attack(goblin)
 player.attack(zombie)
 ```
 
+**Explanation:** The `attack()` method is called on the `player` object with `goblin` and `zombie` as arguments. This simulates the player attacking these monsters.
+
+**Concept Used:** 
+
 #### 5. Displaying Updated Statuses
 
 ```python
@@ -1012,6 +1024,6 @@ goblin.display_status()
 zombie.display_status()
 ```
 
-**Explanation:** After the attacks, the `display_status()` method is called again on the goblin and zombie objects to show their updated health and energy levels.
+**Explanation:** After the attacks, the `display_status()` method is called again on the `goblin` and `zombie` objects to show their updated health and energy levels.
 
 **Concepts Used:** This reiterates the use of encapsulation by showing the updated internal state of the objects through controlled methods.
