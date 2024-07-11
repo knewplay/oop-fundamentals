@@ -51,7 +51,7 @@ For instance, let's say we want to write some code to extract and analyze data f
 
 Now, consider getting hired at a bank to work on their software backend. In this context, we have users who may or may not have bank accounts. Bank accounts have balances, can receive deposits, and have a deposit history. We can withdraw from an account, make deposits, or transfer money from one account to another through transactions. A transaction includes details such as the amount, the 'from' bank account, the 'to' bank account, and the date and time it was completed. This approach helps in modeling the banking system, capturing the relationships and interactions between users, accounts, and transactions in a structured and organized manner.
 
-![ATM interface](./figures/)
+![ATM interface](./figures/atm.jpg)
 *ATM screen displaying user account options.*
 
 By focusing on entities and their interactions, OOP allows us to create software that more closely mirrors real-world systems. This approach can make your programs more intuitive, scalable, and easier to maintain.
