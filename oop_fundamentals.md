@@ -502,6 +502,9 @@ Let's dive deeper into the `Goblin` constructor. When we create a new `Goblin` o
 
 The constructors for the `Dragon` and `Zombie` classes work similarly. They call the `super` constructor to initialize the inherited attributes and then set their unique attributes (`fire_power` for `Dragon` and `decay_level` for `Zombie`). This way, each subclass can build upon the base class while adding its own specialized features.
 
+![Enemies](./figures/creatures.jpg)
+*Goblin, Dragon, and Zombie, each with their unique attributes and abilities.*
+
 An interesting aspect is that you can still do this:
 
 ```python
