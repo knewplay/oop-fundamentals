@@ -538,8 +538,10 @@ The President is not an expert in military strategy, legal affairs, healthcare, 
 
 This approach allows the President to govern effectively without getting bogged down in the specifics of each area. Each advisor provides their expert input, allowing the President to make informed decisions based on their recommendations. This illustrates how polymorphism allows a single interface (the "advise" method) to be used for different types of advice, simplifying the President's role and leveraging the expertise of his advisors.
 
-![President advisors](./figures/)
-*The President saying "advise" to a group of advisors, each providing expert advice based on their field.*
+![President advisors](./figures/adviser.jpg)
+*The President receiving specialized advice from different advisors.*
+
+> Note: You, the programmer, should be like this president. The codebase should be written in such a way that you do not need to know the details of every component. You just have to call the appropriate methods and trust that each object will handle its own specifics.
 
 In OOP, polymorphism is the ability of different objects to respond differently to the same method call. This allows developers to create code that can be reused across different objects and classes, facilitating the process of having multiple classes that can be treated the same way.
 
