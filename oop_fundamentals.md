@@ -331,8 +331,8 @@ Abstraction simplifies code maintenance and enhances readability. It allows diff
 
 For example, when you start a car, you don't need to know how the engine, spark plugs, or battery work. You only need to know how to start the car, turn the steering wheel, accelerate, and brake. The processes that make these actions possible happen in the background and are considered "private" information.
 
-![Car abstracted](./figures/)
-*A Car object can have private methods, only accessible to the car object itself, and public methods, accessible to any other object interacting with the Car object.*
+![Braking system abstracted](./figures/brake_system.jpg)
+*Abstraction allows you to use the car's brake system without understanding its complex inner workings.*
 
 In the illustration above, we have a method like `create_spark()`, which only needs to be called within the `turn_on()` method, which in turn is accessible by other objects, such as `Driver`. So when `turn_on()` gets called by `Driver`, certain private methods will in turn get called by `turn_on()` in order to turn on the car. Here is what the `turn_on()` method might look like, along with the private methods which it calls:
 
