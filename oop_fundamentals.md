@@ -1015,7 +1015,18 @@ player.attack(zombie)
 
 **Explanation:** The `attack()` method is called on the `player` object with `goblin` and `zombie` as arguments. This simulates the player attacking these monsters.
 
-**Concept Used:** 
+**Concept Used:** This one is subtle, but we are in fact using polymorphism here. Why? Because polymorphism allows objects of different classes to be treated as objects of a common super class. In this case, `Goblin` and `Zombie` are both subclasses of the `Monster` class. This means that a `Goblin` object and a `Zombie` object can both be treated as `Monster` objects.
+
+To better understand this, let's look back at the `attack()` method within the `Player` class:
+
+```python
+public function attack(monster):
+    print(this.name + " attacks the " + monster.get_type())
+    monster.perform_attack()
+END function
+```
+
+When the `attack()` method is called with a `monster` argument, the `monster` parameter can refer to any object that is an instance of the `Monster` class or any of its subclasses (e.g., `Goblin` or `Zombie`).
 
 #### 5. Displaying Updated Statuses
 
