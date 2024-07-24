@@ -502,9 +502,6 @@ Let's dive deeper into the `Goblin` constructor. When we create a new `Goblin` o
 
 The constructors for the `Dragon` and `Zombie` classes work similarly. They call the `super` constructor to initialize the inherited attributes and then set their unique attributes (`fire_power` for `Dragon` and `decay_level` for `Zombie`). This way, each subclass can build upon the base class while adding its own specialized features.
 
-![Enemies](./figures/creatures.jpg)
-*Goblin, Dragon, and Zombie, each with their unique attributes and abilities.*
-
 An interesting aspect is that you can still do this:
 
 ```python
@@ -834,6 +831,9 @@ Let's start by defining the main entities in our game: the `Player` and the `Mon
 - `Monster`: A base class for all monsters, with common attributes and methods.
 - `Goblin`: A subclass of `Monster` with unique attributes and methods.
 - `Zombie`: Another subclass of `Monster` with its own unique attributes and methods.
+
+![Enemies](./figures/creatures.jpg)
+*Goblin, Dragon, and Zombie, each with their unique attributes and abilities.*
 
 We'll create a simple game scenario where the player encounters different types of monsters and interacts with them using the principles of OOP.
 
