@@ -334,7 +334,7 @@ For example, when you start a car, you don't need to know how the engine, spark 
 ![Braking system abstracted](./figures/brake_system.jpg)
 *Abstraction allows you to use the car's brake system without understanding its complex inner workings.*
 
-In the illustration above, we have a method like `create_spark()`, which only needs to be called within the `turn_on()` method, which in turn is accessible by other objects, such as `Driver`. So when `turn_on()` gets called by `Driver`, certain private methods will in turn get called by `turn_on()` in order to turn on the car. Here is what the `turn_on()` method might look like, along with the private methods which it calls:
+Let's see what the code for turning on a car might look like. This code snippet demonstrates how public methods can interact with private methods to perform complex actions while hiding the details:
 
 ```python
 class Car:
