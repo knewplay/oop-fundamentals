@@ -443,7 +443,7 @@ END class
 
 Note that I have removed the `name` attribute from the constructor. This is because each subclass will represent a specific type of monster, making the `name` attribute redundant.
 
-Now, we will create subclasses for specific types of monsters, such as Goblin, Dragon, and Zombie. Each subclass will inherit from the `Monster` class and can add its own unique attributes and methods:
+Now, we will create subclasses for specific types of monsters, such as Goblin, Dragon, and Zombie. Each subclass will inherit from the `Monster` class and can add its own unique attributes and methods. The keyword extends is used to indicate that a new class is derived from an existing class, inheriting its properties and methods while allowing additional functionality to be defined in the subclass.
 
 ```python
 # ======== Subclasses ========
