@@ -758,12 +758,6 @@ class Monster:
         # Define the attack mechanics here
     END function
 
-    # Public method to display the monster's status
-    public function display_status():
-        print("Health: " + this.health)
-        print("Energy: " + this.energy)
-    END function
-
     # Method to handle taking damage
     public function take_damage(damage_amount):
         this.health -= damage_amount
@@ -771,6 +765,13 @@ class Monster:
             this.health = 0
         this.roar()
     END function
+
+    # Public method to display the monster's status
+    public function display_status():
+        print("Health: " + this.health)
+        print("Energy: " + this.energy)
+    END function
+
 END class
 ```
 
@@ -778,7 +779,9 @@ END class
 
 In this example, the `roar()` method is private, meaning it cannot be called directly from outside the Monster class. The only way `roar()` can be called is by invoking the `perform_attack()` or `take_damage()` methods, which is a public method. When, for example, `perform_attack()` is called, it reduces the monster's energy and then calls the private `roar()` method to simulate the monster's attack. This ensures that the internal behavior encapsulated by `roar()` is protected and only triggered through controlled interactions.
 
-Additionally, we have a public method `display_status()` to show the monster's current status and a `take_damage()` method to handle damage taken by the monster.
+The `take_damage()` method reduces the monster's health by the specified damage_amount. If the resulting health is less than 0, it sets the health to 0 to prevent negative values. After updating the health, it calls the private `roar()` method to simulate the monster's response to taking damage.
+
+Additionally, we have a public method `display_status()` to show the monster's current status.
 
 By encapsulating the `roar()` method, we ensure that the roar behavior is protected and can only be triggered in a controlled manner through the `perform_attack()` or `take_damage()` methods. This approach helps prevent unintended interference with the monster's behavior.
 
