@@ -728,7 +728,7 @@ dog.display_status()
 # dog.bark()  # Uncommenting this line will cause an error
 ```
 
-In this code snippet, we first create a Dog object with mood set to 50, hunger at 30, and energy at 70. As we call the public methods `play()`, `sleep()`, and `feed()` the private attributes are modified and displayed accordingly.
+In this code snippet, we first create a Dog object with mood set to 50, hunger set to 30, and energy set to 70. As we call the public methods `play()`, `sleep()`, and `feed()` the private attributes are modified and displayed accordingly.
 
 Additionally, the `bark()` method is private and cannot be called directly from outside the class. Uncommenting `dog.bark()` will result in an error because encapsulation restricts access to private methods. This ensures that the dog's internal state and behaviors are only modified through the controlled interfaces provided by the public methods (`play()`, `sleep()`, and `feed()`).
 
@@ -776,7 +776,9 @@ END class
 
 > **Note:** For simplicity, let's imagine we can create a generic monster without using subclasses or specific names.
 
-In this example, the `roar()` method is private, meaning it cannot be called directly from outside the Monster class. Instead, we use the public method `perform_attack()` to access the `roar()` method and simulate the monster's attack. Additionally, we have a public method `display_status()` to show the monster's current status and a `take_damage()` method to handle damage taken by the monster.
+In this example, the `roar()` method is private, meaning it cannot be called directly from outside the Monster class. The only way `roar()` can be called is by invoking the `perform_attack()` or `take_damage()` methods, which is a public method. When, for example, `perform_attack()` is called, it reduces the monster's energy and then calls the private `roar()` method to simulate the monster's attack. This ensures that the internal behavior encapsulated by `roar()` is protected and only triggered through controlled interactions.
+
+Additionally, we have a public method `display_status()` to show the monster's current status and a `take_damage()` method to handle damage taken by the monster.
 
 By encapsulating the `roar()` method, we ensure that the roar behavior is protected and can only be triggered in a controlled manner through the `perform_attack()` or `take_damage()` methods. This approach helps prevent unintended interference with the monster's behavior.
 
