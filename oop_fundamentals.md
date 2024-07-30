@@ -632,8 +632,8 @@ Encapsulation is the fourth and final pillar of OOP. It revolves around restrict
 
 To make this concept more intuitive, let's consider an example with a dog. We'll create a `Dog` class that has private attributes such as `mood`, `hunger`, and `energy`, and a private method `bark()`. These private attributes and methods can only be accessed and modified through public methods such as `sleep()`, `play()`, and `feed()`.
 
-![Dog private public access](./figures/)
-*The dog's private attributes and methods are only accessible through its public methods.*
+![Dogs](./figures/dogs.jpg)
+*The dog’s routines of playing, sleeping, and feeding.*
 
 Let's now take a look at the code-equivalent of this example. Below is the code that represents the `Dog` class:
 
