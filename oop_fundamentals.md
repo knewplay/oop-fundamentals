@@ -844,7 +844,7 @@ We'll create a simple game scenario where the player encounters different types 
 
 ### Defining the Classes
 
-Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate conceptual module or file. While we use the `.cpp` extension here (for C++) for clarity (indicating C++ files), this structure can apply to any Object-Oriented Programming (OOP) language. Each class should be self-contained, making the code easier to maintain and extend. Here's an example of how you might structure the files:
+Before diving into the code, let's discuss how to organize our classes. In a real-world application, it's essential to maintain a clean and organized codebase. To achieve this, we will place each class in a separate conceptual module or file. While we use the `.cpp` extension here for clarity (indicating C++ files), this structure can apply to any OOP language. Each class should be self-contained, making the code easier to maintain and extend. Here's an example of how you might structure the files:
 
 - `monster.cpp`: Contains the base `Monster` class.
 - `goblin.cpp`: Contains the `Goblin` class, which inherits from `Monster`.
@@ -905,7 +905,9 @@ class Goblin extends Monster:
         return "Goblin"
     END function
 END class
+```
 
+```python
 # zombie.cpp
 class Zombie extends Monster:
     function Zombie(health, energy, decay_level):
@@ -1002,7 +1004,7 @@ player = Player("Hero", 100, 100)
 - `Zombie(70, 40, 5)` creates a Zombie with 70 health, 40 energy, and a decay level of 5.
 - `Player("Hero", 100, 50)` creates a Player named "Hero" with 100 health and 50 energy.
 
-**Concepts Used:** This shows the use of constructors to initialize objects with specific attributes.
+**Concepts Used:** This demonstrates the use of constructors to initialize objects with specific attributes. It allows us to convert our class blueprints into actual objects that occupy memory, representing individual monsters and players in the game. By creating these instances, we bring our class definitions to life, enabling them to interact within the game environment, each maintaining their own state and behavior.
 
 #### 3. Displaying Initial Statuses
 
@@ -1014,7 +1016,7 @@ zombie.display_status()
 
 **Explanation:** The `display_status()` method is called on the `player`, `goblin`, and `zombie` objects to print their current health and energy levels.
 
-**Concepts Used:** Encapsulation is demonstrated here as the `display_status()` method provides a controlled way to access and display the object's attributes. Furthermore, (polymorphism)
+**Concepts Used:** This demonstrates encapsulation and abstraction by providing a controlled way to access and display the object's attributes through the `display_status()` method. Furthermore, polymorphism is in action here as each object (player, goblin, and zombie) has its own implementation of `display_status()`, but they are all called in the same way. This shows how different objects can respond to the same method call in their own unique ways.
 
 #### 4. Attacking Monsters
 
