@@ -518,69 +518,6 @@ Even though we didn't define the `attack()` method inside the subclasses, the ba
 
 This example shows how inheritance allows us to define a common set of attributes and methods in a base class (`Monster`) and then extend this functionality in subclasses (`Goblin`, `Dragon`, `Zombie`). Each subclass inherits the properties and behaviors of the base class but can also introduce its own unique features.
 
-#### Method Overriding
-
-Method overriding is a key concept in inheritance where a subclass provides a specific implementation of a method that is already defined in its superclass. This allows a subclass to modify or extend the behavior of that method.
-
-Here is a new set of subclass definitions
-
-```python
-# ======== Subclasses ========
-class Goblin extends Monster:
-    function Goblin(health, energy, stealth_level):
-        this.super(health, energy)
-        this.stealth_level = stealth_level  # Unique attribute for Goblin
-    END function
-
-    public function attack():
-        print("The Goblin swings a club!")
-        # Define the attack mechanics for the Goblin here
-    END function
-END class
-
-class Dragon extends Monster:
-    function Dragon(health, energy, fire_power):
-        this.super(health, energy)
-        this.fire_power = fire_power  # Unique attribute for Dragon
-    END function
-
-    public function attack():
-        print("The Dragon breathes fire!")
-        # Define the attack mechanics for the Dragon here
-    END function
-END class
-
-class Zombie extends Monster:
-    function Zombie(health, energy, decay_level):
-        this.super(health, energy)
-        this.decay_level = decay_level  # Unique attribute for Zombie
-    END function
-
-    public function attack():
-        print("The Zombie bites viciously!")
-        # Define the attack mechanics for the Zombie here
-    END function
-END class
-```
-
-In the example above, each subclass (`Goblin`, `Dragon`, `Zombie`) overrides the `attack()` method of the `Monster` class. The `attack()` method in each subclass has its own unique implementation, specific to the type of monster.
-
-By overriding the `attack()` method, we ensure that each type of monster has its own specific attack behavior, even though they all share the common interface defined by the `Monster` class. This is a powerful aspect of inheritance that enhances code flexibility and reusability.
-
-Now, let's create instances of these subclasses and call the `attack()` method on each:
-
-```python
-goblin = Goblin(50, 30, 70)
-dragon = Dragon(300, 200, 500)
-zombie = Zombie(70, 50, 10)
-
-goblin.attack()  # Output: The Goblin swings a club!
-dragon.attack()  # Output: The Dragon breathes fire!
-zombie.attack()  # Output: The Zombie bites viciously!
-```
-
-This example shows how inheritance allows us to define a common set of attributes and methods in a base class (`Monster`) and then extend this functionality in subclasses (`Goblin`, `Dragon`, `Zombie`). Each subclass inherits the properties and behaviors of the base class but can also introduce its own unique features through method overriding.
-
 ### Polymorphism
 
 The word polymorphism comes from the Greek words "poly" (meaning many) and "morph" (meaning forms). In programming, it refers to the ability of a single function or method to work in different ways depending on the object it is acting upon. Polymorphism promotes flexibility and integration in your code, making it easier to manage and extend.
@@ -669,6 +606,8 @@ END class
 In the `Monster` class, we define a base method called `attack()`. This method prints a generic message indicating that the monster attacks. The `Monster` class serves as a blueprint for creating different types of monsters, and each monster can have its own way of attacking.
 
 To create specific types of monsters, we define subclasses such as `Goblin`, `Dragon`, and `Zombie`. Each subclass inherits from the `Monster` class and redefines the `attack()` method to provide its own specific implementation. This is how polymorphism works: the same method call (`attack()`) can produce different behaviors depending on the type of object it is called on.
+
+This is also known as **method overriding**, where a subclass provides a specific implementation of a method that is already defined in its superclass. So what we say is that each subclass (`Goblin`, `Dragon`, `Zombie`) **overrides** the `attack()` method of the `Monster` class. The `attack()` method in each subclass has its own unique implementation, specific to the type of monster.
 
 For example, in the `Goblin` class, the `attack()` method is redefined to have the goblin swing a club. Similarly, the `Dragon` class redefines the `attack()` method to breathe fire, and the `Zombie` class redefines specifies attacking as biting.
 
