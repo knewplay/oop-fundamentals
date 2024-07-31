@@ -873,15 +873,19 @@ class Monster:
     # Public method to perform an attack action
     public function perform_attack():
         this.energy -= 10
+        this.attack()  # Call the specific attack method
         this.roar()
-        print("The monster attacks!")
-        # Define the attack mechanics here
     END function
 
     # Public method to display the monster's status
     public function display_status():
         print("Health: " + this.health)
         print("Energy: " + this.energy)
+    END function
+
+    # Placeholder method to be overridden by subclasses
+    public function attack():
+        print("Generic monster attack")
     END function
 END class
 ```
@@ -893,7 +897,7 @@ Next, we define the `Goblin` and `Zombie` subclasses that inherit from `Monster`
 class Goblin extends Monster:
     function Goblin(health, energy, stealth_level):
         this.super(health, energy)
-        this.stealth_level = stealth_level
+        this.stealth_level = stealth_level  # Unique attribute for Goblin
     END function
 
     public function attack():
@@ -912,7 +916,7 @@ END class
 class Zombie extends Monster:
     function Zombie(health, energy, decay_level):
         this.super(health, energy)
-        this.decay_level = decay_level
+        this.decay_level = decay_level  # Unique attribute for Zombie
     END function
 
     public function attack():
@@ -939,7 +943,8 @@ class Player:
 
     public function attack(monster):
         print(this.name + " attacks the " + monster.get_type())
-        monster.perform_attack()
+        monster.perform_attack()  # Monster responds to the player's attack
+        this.energy -= 5  # Player uses energy to attack
     END function
 
     public function display_status():
