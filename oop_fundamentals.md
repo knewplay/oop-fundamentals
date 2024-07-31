@@ -1032,7 +1032,13 @@ player.attack(goblin)
 player.attack(zombie)
 ```
 
-**Explanation:** The `attack()` method is called on the `player` object with `goblin` and `zombie` as arguments. This simulates the player attacking these monsters.
+**Explanation:** The `attack()` method is called on the `player` object with `goblin` and `zombie` as arguments. This simulates the player attacking these monsters, as well as the monster fighting back. Let's dive into this method call.
+
+When the `attack()` method is called on the `player` object, the following steps occur:
+
+1. The `print(this.name + " attacks the " + monster.get_type())` statement outputs a message indicating that the player is attacking the monster. Here, `this.name` refers to the player's name, and `monster.get_type()` returns the type of the monster (e.g., "Goblin" or "Zombie").
+2. The `monster.perform_attack()` call invokes the `perform_attack()` method on the `monster` object, which represents the monster's response to the player's attack. This method is inherited from the `Monster` class and may include specific actions defined in the monster's subclass.
+3. `this.energy -= 5` reduces the player's energy by 5 points, simulating the energy expenditure required for the attack.
 
 **Concept Used:** This one is subtle, but we are in fact using polymorphism here. Why? Because polymorphism allows objects of different classes to be treated as objects of a common super class. In this case, `Goblin` and `Zombie` are both subclasses of the `Monster` class. This means that a `Goblin` object and a `Zombie` object can both be treated as `Monster` objects.
 
@@ -1041,11 +1047,14 @@ To better understand this, let's look back at the `attack()` method within the `
 ```python
 public function attack(monster):
     print(this.name + " attacks the " + monster.get_type())
-    monster.perform_attack()
+    monster.perform_attack()  # Monster responds to the player's attack
+    this.energy -= 5  # Player uses energy to attack
 END function
 ```
 
-When the `attack()` method is called with a `monster` argument, the `monster` parameter can refer to any object that is an instance of the `Monster` class or any of its subclasses (e.g., `Goblin` or `Zombie`).
+Polymorphism enables objects of different classes to be treated as objects of a common superclass. In this case, `Goblin` and `Zombie` are both subclasses of the `Monster` class, allowing them to be treated as `Monster` objects. The `attack()` method in the `Player` class accepts a parameter of type `Monster`, so a `Goblin` object and a `Zombie` object can both be passed to this method, showcasing polymorphism. When the `attack()` method is called, the specific monster's `perform_attack()` method is executed, which behaves differently depending on whether the monster is a `Goblin` or a `Zombie`.
+
+Additionally, the fact that `attack()` (within the `perform_attack()` method) can be called on any type of monster also demonstrates polymorphism. Each subclass (`Goblin`, `Dragon`, `Zombie`) overrides the `attack()` method to provide its own specific behavior. This allows the code to remain flexible and extensible, as new types of monsters can be added with their unique behaviors without altering the existing code structure.
 
 #### 5. Displaying Updated Statuses
 
@@ -1056,4 +1065,4 @@ zombie.display_status()
 
 **Explanation:** After the attacks, the `display_status()` method is called again on the `goblin` and `zombie` objects to show their updated health and energy levels.
 
-**Concepts Used:** This reiterates the use of encapsulation by showing the updated internal state of the objects through controlled methods.
+**Concepts Used:** This reiterates the use of encapsulation by showing the updated internal state of the objects through controlled methods. It also demonstrates polymorphism, as the `display_status()` method can be called on different types of monsters, each providing its specific implementation.
